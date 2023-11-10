@@ -1,0 +1,166 @@
+{
+  "capitals": [
+      {
+          "Id": 0,
+          "Country": "France",
+          "Options": [
+              "A. Paris",
+              "B. Rome",
+              "C. Madrid"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 1,
+          "Country": "Japan",
+          "Options": [
+              "A. Beijing",
+              "B. Tokyo",
+              "C. New Delhi"
+          ],
+          "Answer": 1
+      },
+      {
+          "Id": 2,
+          "Country": "Germany",
+          "Options": [
+              "A. Berlin",
+              "B. Munich",
+              "C. Hamburg"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 3,
+          "Country": "Brazil",
+          "Options": [
+              "A. Rio de Janeiro",
+              "B. São Paulo",
+              "C. Brasília"
+          ],
+          "Answer": 2
+      },
+      {
+          "Id": 4,
+          "Country": "India",
+          "Options": [
+              "A. Delhi",
+              "B. Mumbai",
+              "C. Chennai"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 5,
+          "Country": "China",
+          "Options": [
+              "A. Shanghai",
+              "B. Beijing",
+              "C. Hong Kong"
+          ],
+          "Answer": 1
+      },
+      {
+          "Id": 6,
+          "Country": "United Kingdom",
+          "Options": [
+              "A. London",
+              "B. Manchester",
+              "C. Edinburgh"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 7,
+          "Country": "Australia",
+          "Options": [
+              "A. Sydney",
+              "B. Melbourne",
+              "C. Brisbane"
+          ],
+          "Answer": 1
+      },
+      {
+          "Id": 8,
+          "Country": "Canada",
+          "Options": [
+              "A. Ottawa",
+              "B. Toronto",
+              "C. Vancouver"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 9,
+          "Country": "Italy",
+          "Options": [
+              "A. Rome",
+              "B. Florence",
+              "C. Venice"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 10,
+          "Country": "Spain",
+          "Options": [
+              "A. Madrid",
+              "B. Barcelona",
+              "C. Seville"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 11,
+          "Country": "South Korea",
+          "Options": [
+              "A. Seoul",
+              "B. Busan",
+              "C. Incheon"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 12,
+          "Country": "Russia",
+          "Options": [
+              "A. Moscow",
+              "B. Saint Petersburg",
+              "C. Vladivostok"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 13,
+          "Country": "Mexico",
+          "Options": [
+              "A. Mexico City",
+              "B. Cancún",
+              "C. Guadalajara"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 14,
+          "Country": "Netherlands",
+          "Options": [
+              "A. Amsterdam",
+              "B. Rotterdam",
+              "C. The Hague"
+          ],
+          "Answer": 0
+      },
+      {
+          "Id": 15,
+          "Country": "Argentina",
+          "Options": [
+              "A. Mendoza",
+              "B. Cordoba",
+              "C. Buenos Aires"
+          ],
+          "Answer": 2
+      }
+  ]
+}
+
+  

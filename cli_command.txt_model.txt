@@ -1,0 +1,164 @@
+[15:57:49.891] [bmv2] [D] [thread 390697] Set default default entry for table 'MatchActionImpl.etherTable': MatchActionImpl.dropPacket - 
+[15:57:49.891] [bmv2] [D] [thread 390697] Set default default entry for table 'MatchActionImpl.ipv4_filter': NoAction - 
+[15:57:49.891] [bmv2] [D] [thread 390697] Set default default entry for table 'MatchActionImpl.ipv6_filter': NoAction - 
+[15:57:49.891] [bmv2] [D] [thread 390697] Set default default entry for table 'tbl_dropPacket': MatchActionImpl.dropPacket - 
+[15:57:49.891] [bmv2] [D] [thread 390697] Set default default entry for table 'tbl_dropPacket_0': MatchActionImpl.dropPacket - 
+[15:57:50.448] [bmv2] [T] [thread 390709] bm_get_config
+[15:57:50.461] [bmv2] [T] [thread 390709] run_traffic
+[15:57:50.461] [bmv2] [D] [thread 390709] Interface = packets
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Parser 'parser': start
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Extracting header 'ethernet'
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Parser state 'start': key is 9000
+[15:57:50.464] [bmv2] [T] [thread 390709] [0.0] [cxt 0] Bytes parsed: 14
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Parser 'parser': end
+[15:57:50.464] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Pipeline 'ingress': start
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] program.p4(114) Condition "hdr.ethernet.isValid()" (node_2) is true
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] Applying table 'MatchActionImpl.etherTable'
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Looking up key:
+* hdr.ethernet.etherType: 9000
+
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Table 'MatchActionImpl.etherTable': miss
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.465] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] program.p4(116) Condition "hdr.ipv4.isValid()" (node_4) is false
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] program.p4(119) Condition "hdr.ipv6.isValid()" (node_6) is false
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] Applying table 'tbl_dropPacket'
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Looking up key:
+
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Table 'tbl_dropPacket': miss
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.465] [bmv2] [T] [thread 390709] [0.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.465] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Pipeline 'ingress': end
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Deparser 'deparser': start
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Deparsing header 'ethernet'
+[15:57:50.465] [bmv2] [D] [thread 390709] [0.0] [cxt 0] Deparser 'deparser': end
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Parser 'parser': start
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Extracting header 'ethernet'
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Parser state 'start': key is 9000
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] Bytes parsed: 14
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Parser 'parser': end
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Pipeline 'ingress': start
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] program.p4(114) Condition "hdr.ethernet.isValid()" (node_2) is true
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] Applying table 'MatchActionImpl.etherTable'
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Looking up key:
+* hdr.ethernet.etherType: 9000
+
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Table 'MatchActionImpl.etherTable': miss
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.466] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] program.p4(116) Condition "hdr.ipv4.isValid()" (node_4) is false
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] program.p4(119) Condition "hdr.ipv6.isValid()" (node_6) is false
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] Applying table 'tbl_dropPacket'
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Looking up key:
+
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Table 'tbl_dropPacket': miss
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.466] [bmv2] [T] [thread 390709] [1.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.466] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.466] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Pipeline 'ingress': end
+[15:57:50.467] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Deparser 'deparser': start
+[15:57:50.467] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Deparsing header 'ethernet'
+[15:57:50.467] [bmv2] [D] [thread 390709] [1.0] [cxt 0] Deparser 'deparser': end
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Parser 'parser': start
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Extracting header 'ethernet'
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Parser state 'start': key is 9000
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] Bytes parsed: 14
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Parser 'parser': end
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Pipeline 'ingress': start
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] program.p4(114) Condition "hdr.ethernet.isValid()" (node_2) is true
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] Applying table 'MatchActionImpl.etherTable'
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Looking up key:
+* hdr.ethernet.etherType: 9000
+
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Table 'MatchActionImpl.etherTable': miss
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.467] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] program.p4(116) Condition "hdr.ipv4.isValid()" (node_4) is false
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] program.p4(119) Condition "hdr.ipv6.isValid()" (node_6) is false
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] Applying table 'tbl_dropPacket'
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Looking up key:
+
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Table 'tbl_dropPacket': miss
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.467] [bmv2] [T] [thread 390709] [2.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.467] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.467] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Pipeline 'ingress': end
+[15:57:50.468] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Deparser 'deparser': start
+[15:57:50.468] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Deparsing header 'ethernet'
+[15:57:50.468] [bmv2] [D] [thread 390709] [2.0] [cxt 0] Deparser 'deparser': end
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Parser 'parser': start
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Extracting header 'ethernet'
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Parser state 'start': key is 9000
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] Bytes parsed: 14
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Parser 'parser': end
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Pipeline 'ingress': start
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] program.p4(114) Condition "hdr.ethernet.isValid()" (node_2) is true
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] Applying table 'MatchActionImpl.etherTable'
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Looking up key:
+* hdr.ethernet.etherType: 9000
+
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Table 'MatchActionImpl.etherTable': miss
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.468] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] program.p4(116) Condition "hdr.ipv4.isValid()" (node_4) is false
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] program.p4(119) Condition "hdr.ipv6.isValid()" (node_6) is false
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] Applying table 'tbl_dropPacket'
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Looking up key:
+
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Table 'tbl_dropPacket': miss
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.468] [bmv2] [T] [thread 390709] [3.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.468] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Pipeline 'ingress': end
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Deparser 'deparser': start
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Deparsing header 'ethernet'
+[15:57:50.468] [bmv2] [D] [thread 390709] [3.0] [cxt 0] Deparser 'deparser': end
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Parser 'parser': start
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Extracting header 'ethernet'
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Parser state 'start': key is 9000
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] Bytes parsed: 14
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Parser 'parser': end
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Pipeline 'ingress': start
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] program.p4(114) Condition "hdr.ethernet.isValid()" (node_2) is true
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] Applying table 'MatchActionImpl.etherTable'
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Looking up key:
+* hdr.ethernet.etherType: 9000
+
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Table 'MatchActionImpl.etherTable': miss
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.469] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] program.p4(116) Condition "hdr.ipv4.isValid()" (node_4) is false
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] program.p4(119) Condition "hdr.ipv6.isValid()" (node_6) is false
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] Applying table 'tbl_dropPacket'
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Looking up key:
+
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Table 'tbl_dropPacket': miss
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] Action MatchActionImpl.dropPacket
+[15:57:50.469] [bmv2] [T] [thread 390709] [4.0] [cxt 0] program.p4(90) Primitive smeta.drop = 1
+[15:57:50.469] [bmv2] [D] [thread 390709] Primitive assign results in standard_metadata_t.drop = 0x1
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Pipeline 'ingress': end
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Deparser 'deparser': start
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Deparsing header 'ethernet'
+[15:57:50.469] [bmv2] [D] [thread 390709] [4.0] [cxt 0] Deparser 'deparser': end
+[15:57:50.470] [bmv2] [T] [thread 390709] exit
