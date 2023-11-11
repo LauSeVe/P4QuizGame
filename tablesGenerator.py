@@ -3,7 +3,7 @@ import json
 
 # Specify the path to your JSON file
 json_file = "data.json"
-output_file = "cli-command.txt"
+output_file = "cli_command.txt"
 
 try:
     # Open and read the JSON file

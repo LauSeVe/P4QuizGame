@@ -1,7 +1,6 @@
 #include <core.p4>
 #include <xsa.p4>
 
-const bit<16> TYPE_QUIZ0 = 0x1111;
 
 header ethernet_t {
     bit<48> dstAddr;      // Destination MAC address.
@@ -9,19 +8,19 @@ header ethernet_t {
     bit<16> etherType;    // Ethernet type
 }
 
-header quizheader0_t {
+header quiz0_t {
     bit<4> session;
     bit<2> type;
     bit<2> lvl;
-    byte<20> question;
-    byte<20> answer1;
-    byte<20> answer2;
-    byte<20> answer3;
+    bit<160> question;
+    bit<160> answer1;
+    bit<160> answer2;
+    bit<160> answer3;
 }
 
 struct headers {
     ethernet_t ethernet;
-    quizheader0_t quizheader0;
+    quiz0_t quiz0;
 }
 
 struct smartnic_metadata {
@@ -49,12 +48,11 @@ parser ParserImpl(packet_in packet,
     state parse_ethernet {
         packet.extract(hdr.ethernet);
         transition select(hdr.ethernet.etherType) {
-            TYPE_QUIZ0: parse_quiz0;
             default: accept;
         }
     }
     state parse_quiz0 {
-        packet.extract(hdr.quizheader0);
+        packet.extract(hdr.quiz0);
         transition accept;
     }
 }
@@ -67,14 +65,30 @@ control MatchActionImpl(inout headers hdr,
         smeta.drop = 1;
     }
 
+    action lvl1Forward(bit<160> question){
+        hdr.quiz0.question = question;
+    }
+
+    table lvl1 {
+        key = {hdr.quiz0.session : exact;}
+        actions = { 
+            lvl1Forward;
+            dropPacket;
+        }
+        size = 1024; 
+        default_action = dropPacket; 
+    }
+
+
     apply {
         if (hdr.ethernet.isValid()){
-            etherTable.apply();
-            if (hdr.ipv4.isValid()){
-                ipv4_filter.apply();
-            }
-            else if (hdr.ipv6.isValid()){
-                ipv6_filter.apply();
+            if (hdr.quiz0.isValid()){
+                if (hdr.quiz0.lvl == 0){
+                    lvl1.apply();
+                }
+                else{
+                    dropPacket();
+                }
             }
             else {
                dropPacket();
@@ -93,8 +107,7 @@ control DeparserImpl(packet_out packet,
                       inout standard_metadata_t smeta) {
     apply {
         packet.emit(hdr.ethernet);  // Emit the Ethernet header.
-        packet.emit(hdr.ipv4);
-        packet.emit(hdr.ipv6);
+        packet.emit(hdr.quiz0);
     }
 }
 
