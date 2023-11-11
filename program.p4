@@ -1,8 +1,7 @@
 #include <core.p4>
 #include <xsa.p4>
 
-const bit<16> TYPE_IPV4 = 0x800;
-const bit<16> TYPE_IPV6 = 0x86dd;
+const bit<16> TYPE_QUIZ0 = 0x1111;
 
 header ethernet_t {
     bit<48> dstAddr;      // Destination MAC address.
@@ -10,36 +9,19 @@ header ethernet_t {
     bit<16> etherType;    // Ethernet type
 }
 
-header ipv4_t {
-    bit<4>    version;
-    bit<4>    ihl;
-    bit<8>    diffserv;
-    bit<16>   totalLen;
-    bit<16>   identification;
-    bit<3>    flags;
-    bit<13>   fragOffset;
-    bit<8>    ttl;
-    bit<8>    protocol;
-    bit<16>   hdrChecksum;
-    bit<32>   srcAddr;
-    bit<32>   dstAddr;
-}
-
-header ipv6_t {
-    bit<4> version;
-    bit<8> traffic_class;
-    bit<20> flow_label;
-    bit<16> payload_len;
-    bit<8> next_hdr;
-    bit<8> hop_limit;
-    bit<128> src_addr;
-    bit<128> dst_addr;
+header quizheader0_t {
+    bit<4> session;
+    bit<2> type;
+    bit<2> lvl;
+    byte<20> question;
+    byte<20> answer1;
+    byte<20> answer2;
+    byte<20> answer3;
 }
 
 struct headers {
     ethernet_t ethernet;
-    ipv4_t ipv4;
-    ipv6_t ipv6;
+    quizheader0_t quizheader0;
 }
 
 struct smartnic_metadata {
@@ -67,17 +49,12 @@ parser ParserImpl(packet_in packet,
     state parse_ethernet {
         packet.extract(hdr.ethernet);
         transition select(hdr.ethernet.etherType) {
-            TYPE_IPV4: parse_ipv4;
-            TYPE_IPV6: parse_ipv6;
+            TYPE_QUIZ0: parse_quiz0;
             default: accept;
         }
     }
-    state parse_ipv4 {
-        packet.extract(hdr.ipv4);
-        transition accept;
-    }
-    state parse_ipv6 {
-        packet.extract(hdr.ipv6);
+    state parse_quiz0 {
+        packet.extract(hdr.quizheader0);
         transition accept;
     }
 }
@@ -90,26 +67,6 @@ control MatchActionImpl(inout headers hdr,
         smeta.drop = 1;
     }
 
-    table etherTable {
-        key = {hdr.ethernet.etherType : exact; }
-        actions = { dropPacket ; NoAction; }
-        size = 1024;
-        default_action = dropPacket;
-    }
-
-    table ipv4_filter{
-        key = { hdr.ipv4.srcAddr: exact;}
-        actions = {dropPacket ; NoAction;}
-        size = 1024;
-        default_action = NoAction;
-    }
-
-    table ipv6_filter{
-        key = { hdr.ipv6.src_addr: exact;}
-        actions = {dropPacket ; NoAction;}
-        size = 1024;
-        default_action = NoAction;
-    }
     apply {
         if (hdr.ethernet.isValid()){
             etherTable.apply();
