@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
+
+import logging
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 import random
+import os
+import time
+from headers import *
+
+def wait_for_file(file_path, timeout=60, interval=1):
+    start_time = time.time()
+    while not os.path.exists(file_path):
+        if time.time() - start_time > timeout:
+            return False
+        time.sleep(interval)
+    return True
 
 try:
     # Print the question
@@ -26,29 +40,66 @@ try:
         print("Invalid input.")
         exit()
 
-    # Create my header with scapy
-    class QuizHeader0(Packet):
-        name = "QuizHeader0"
-        fields_desc = [
-            BitField("session", 0, 4),
-            BitField("type", 0, 2),
-            BitField("lvl", 0, 2),
-            StrFixedLenField("question", b"\x00" * 20, length=20),
-            StrFixedLenField("answer1", b"\x00" * 20, length=20),
-            StrFixedLenField("answer2", b"\x00" * 20, length=20),
-            StrFixedLenField("answer3", b"\x00" * 20, length=20),
-        ]
-    
+    # Create the header to request the quiz
     userSession = random.randint(0, 15)
-    packetType=00
-    packetQuestion=0
-    packetAnswer1=0
-    packetAnswer2=0
-    packetAnswer3=0
+    packetQuestion="Spain"
+    packetAnswer1="Madrid"
+    packetAnswer2="Spain"
+    packetAnswer3="Spain"
 
-    custom_packet = Ether() / QuizHeader0(session=userSession, type=packetType, lvl = userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
-    pcap_file = "packet0.pcap"
-    wrpcap(pcap_file, custom_packet)
+    bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
+    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=00, lvl = userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
+    request_packet_in = "./requestQuiz/packet_in.pcap"
+    wrpcap(request_packet_in, custom_packet_request)
+
+    # Wait until packet_out is created
+    request_packet_out = "./requestQuiz/packet_out.pcap"
+    if wait_for_file(request_packet_out):
+    # Print the question and options from the packet_out
+        packets = rdpcap(request_packet_out)
+        for packet in packets:
+            print(packet.summary())
+            packet.show()
+            if QuizHeaderRequest in packet:
+                quizHeaderRequest = packet[QuizHeaderRequest]
+                session_request = quizHeaderRequest.session
+                type_request = quizHeaderRequest.type
+                lvl_request = quizHeaderRequest.lvl
+                question_text_request = quizHeaderRequest.question.decode('utf-8').split('\x00')[0]
+                print(f"Which is the capital of {question_text_request}?")
+                answer1_text_request = quizHeaderRequest.answer1.decode('utf-8').split('\x00')[0]
+                print(f"a. {answer1_text_request}")
+                answer2_text_request = quizHeaderRequest.answer2.decode('utf-8').split('\x00')[0]
+                print(f"b. {answer2_text_request}")
+                answer3_text_request = quizHeaderRequest.answer3.decode('utf-8').split('\x00')[0]
+                print(f"c. {answer3_text_request}")
+    else:
+    # Handle the case when the timeout is reached
+        print("File not created within the specified timeout.")
+        exit()
+    
+    # Prompt the user to select an option
+    user_answer = input("Select the option: ")
+
+    # Check if user_answer is 'A', 'B', or 'C'
+    if (user_answer.upper() == 'A'):
+        userAnswer = answer1_text_request
+    elif (user_answer.upper() == 'B'):
+        userAnswer = answer2_text_request
+    elif (user_answer.upper() == 'C'):
+        userAnswer = answer3_text_request
+    else:
+        print("Invalid input. Please enter 'A', 'B', or 'C'.")
+        exit()
+
+
+    # Create the header to reply the quiz
+    bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REPLY)
+    custom_packet_reply = Ether(type = TYPE_QUIZ_REPLY) / QuizHeaderReply(session=session_request, type=2, lvl=lvl_request, question=question_text_request, user_answer=userAnswer) 
+    reply_packet_in = "./replyQuiz/packet_in.pcap"
+    wrpcap(reply_packet_in, custom_packet_reply)
+
+
 
 except Exception as e:
     print(f"An error occurred: {e}")
