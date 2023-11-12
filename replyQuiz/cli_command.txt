@@ -14,11 +14,3 @@ table_add comprobation forwardPacket 0x4d657869636f => 0x4d657869636f2043697479
 table_add comprobation forwardPacket 0x4e65746865726c616e6473 => 0x416d7374657264616d 
 table_add comprobation forwardPacket 0x417267656e74696e61 => 0x4275656e6f73204169726573 
 table_add comprobation forwardPacket 0x4672616e6365 => 0x5061726973 
-
-
-# run traffic 
-run_traffic packets
-
-#end
-exit
-
