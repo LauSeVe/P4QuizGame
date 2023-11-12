@@ -52,7 +52,7 @@ try:
     request_packet_in = "./requestQuiz/packet_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
-    # Wait until packet_out is created
+    # Wait until request_packet_out is created
     request_packet_out = "./requestQuiz/packet_out.pcap"
     if wait_for_file(request_packet_out):
     # Print the question and options from the packet_out
@@ -94,12 +94,37 @@ try:
 
 
     # Create the header to reply the quiz
-    bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REPLY)
+    bind_layers(Ether, QuizHeaderReply, type=TYPE_QUIZ_REPLY)
     custom_packet_reply = Ether(type = TYPE_QUIZ_REPLY) / QuizHeaderReply(session=session_request, type=2, lvl=lvl_request, question=question_text_request, user_answer=userAnswer) 
-    reply_packet_in = "./replyQuiz/packet_in.pcap"
+    reply_packet_in = "./replyQuiz/packet_out.pcap"
     wrpcap(reply_packet_in, custom_packet_reply)
 
-
+    # Wait until reply_packet_out is created
+    reply_packet_out = "./replyQuiz/packet_out.pcap"
+    if wait_for_file(reply_packet_out):
+    # Print the question and options from the packet_out
+        packets = rdpcap(reply_packet_out)
+        for packet in packets:
+            print(packet.summary())
+            packet.show()
+            if QuizHeaderReply in packet:
+                quizHeaderReply = packet[QuizHeaderReply]
+                session_reply = quizHeaderReply.session
+                type_reply = quizHeaderReply.type
+                lvl_reply = quizHeaderReply.lvl
+                question_text_reply = quizHeaderReply.question.decode('utf-8').split('\x00')[0]
+                correct_text_reply = quizHeaderReply.user_answer.decode('utf-8').split('\x00')[0]
+                print(f"{correct_text_reply}")
+                if(correct_text_reply == "Correct"):
+                    print(f"Congratulations, your answer is correct!")
+                elif(correct_text_reply == "Incorrect"):
+                    print(f"Your answer is not correct, keep trying.")
+                else:
+                    print(f"There was a problem.")
+    else:
+    # Handle the case when the timeout is reached
+        print("File not created within the specified timeout.")
+        exit()
 
 except Exception as e:
     print(f"An error occurred: {e}")
