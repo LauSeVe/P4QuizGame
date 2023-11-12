@@ -4,6 +4,5 @@ Thrift client connection established
 Obtaining JSON from switch...
 Done
 Control utility for runtime P4 table manipulation
-RuntimeCmd: Error: Invalid table name (protocol_filter)
-RuntimeCmd: Error: Invalid table name (protocol_filter)
+RuntimeCmd: Error: Invalid table name (lvl1)
 RuntimeCmd: RuntimeCmd: 

@@ -1,0 +1,64 @@
+[19:51:39.193] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_act': act_2 - 
+[19:51:39.193] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_act_0': act - 
+[19:51:39.193] [bmv2] [D] [thread 2748798] Set default default entry for table 'MatchActionImpl.comprobation': MatchActionImpl.dropPacket - 
+[19:51:39.193] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_act_1': act_0 - 
+[19:51:39.193] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_act_2': act_1 - 
+[19:51:39.194] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_dropPacket': MatchActionImpl.dropPacket - 
+[19:51:39.194] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_dropPacket_0': MatchActionImpl.dropPacket - 
+[19:51:39.194] [bmv2] [D] [thread 2748798] Set default default entry for table 'tbl_dropPacket_1': MatchActionImpl.dropPacket - 
+[19:51:39.623] [bmv2] [T] [thread 2748821] bm_get_config
+[19:51:39.635] [bmv2] [T] [thread 2748821] run_traffic
+[19:51:39.635] [bmv2] [D] [thread 2748821] Interface = packets
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser 'parser': start
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Extracting header 'ethernet'
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser state 'start': key is 2222
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser 'parser' entering state 'parse_quizreply'
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Extracting header 'quizreply'
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser state 'parse_quizreply' has no switch, going to default next state
+[19:51:39.637] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Bytes parsed: 55
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Parser 'parser': end
+[19:51:39.637] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Pipeline 'ingress': start
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Applying table 'tbl_act'
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Looking up key:
+
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Table 'tbl_act': miss
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Action entry is act_2 - 
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Action act_2
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(84) Primitive bit<160> user_answer_tmp = hdr.quizreply.user_answer;
+[19:51:39.638] [bmv2] [D] [thread 2748821] Primitive assign results in scalars.user_answer_tmp = 0x4d61647269640000000000000000000000000000
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(85) Condition "hdr.ethernet.isValid()" (node_3) is true
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(86) Condition "hdr.quizreply.isValid()" (node_4) is true
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(87) Condition "hdr.quizreply.type == 2" (node_5) is true
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Applying table 'tbl_act_0'
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Looking up key:
+
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Table 'tbl_act_0': miss
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Action entry is act - 
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Action act
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(88) Primitive hdr.quizreply.type = 3
+[19:51:39.638] [bmv2] [D] [thread 2748821] Primitive assign results in quizreply.type = 0x3
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Applying table 'MatchActionImpl.comprobation'
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Looking up key:
+* hdr.quizreply.question: 537061696e000000000000000000000000000000
+
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Table 'MatchActionImpl.comprobation': miss
+[19:51:39.638] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Action MatchActionImpl.dropPacket
+[19:51:39.638] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(65) Primitive smeta.drop = 1
+[19:51:39.638] [bmv2] [D] [thread 2748821] Primitive assign results in standard_metadata_t.drop = 0x1
+[19:51:39.639] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(90) Condition "hdr.quizreply.user_answer == user_answer_tmp" (node_8) is true
+[19:51:39.639] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Applying table 'tbl_act_1'
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Looking up key:
+
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Table 'tbl_act_1': miss
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Action entry is act_0 - 
+[19:51:39.639] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] Action act_0
+[19:51:39.639] [bmv2] [T] [thread 2748821] [0.0] [cxt 0] program.p4(91) Primitive hdr.quizreply.correct = 0x1
+[19:51:39.639] [bmv2] [D] [thread 2748821] Primitive assign results in quizreply.correct = 0x1
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Pipeline 'ingress': end
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Deparser 'deparser': start
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Deparsing header 'ethernet'
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Deparsing header 'quizreply'
+[19:51:39.639] [bmv2] [D] [thread 2748821] [0.0] [cxt 0] Deparser 'deparser': end
+[19:51:39.639] [bmv2] [T] [thread 2748821] exit

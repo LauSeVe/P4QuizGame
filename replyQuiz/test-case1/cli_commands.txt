@@ -1,0 +1,7 @@
+table_add lvl1 lvl1Forward 0x1 => 0x50657275
+
+# run traffic 
+run_traffic packets
+
+# end 
+exit
