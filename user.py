@@ -41,14 +41,14 @@ try:
         exit()
 
     # Create the header to request the quiz
-    userSession = random.randint(0, 15)
+    userSession = 10
     packetQuestion = {userSession}
     packetAnswer1= {userSession}
     packetAnswer2= {userSession}
     packetAnswer3= {userSession}
 
     bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
-    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=00, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
+    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=1, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
     request_packet_in = "./requestQuiz/test-case1/packets_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
@@ -113,12 +113,11 @@ try:
                 session_reply = quizHeaderReply.session
                 type_reply = quizHeaderReply.type
                 correct_reply = quizHeaderReply.correct
-                question_text_reply = quizHeaderReply.question.decode('utf-8').split('\x00')[0]
-                correct_text_reply = quizHeaderReply.user_answer
-                print(f"{correct_text_reply}")
-                if(correct_text_reply == 1):
+                correct_text_reply = quizHeaderReply.user_answer.decode('utf-8').split('\x00')[0]
+                question_text_reply = quizHeaderReply.question
+                if(correct_reply == 1):
                     print(f"Congratulations, your answer is correct!")
-                elif(correct_text_reply == 2):
+                elif(correct_reply == 2):
                     print(f"Your answer is not correct, keep trying.")
                 else:
                     print(f"There was a problem.")

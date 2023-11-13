@@ -87,12 +87,11 @@ control MatchActionImpl(inout headers hdr,
                 if (hdr.quizreply.type == 2){
                     hdr.quizreply.type = 3;
                     comprobation.apply();
-                    if (hdr.quizreply.user_answer == user_answer_tmp){
-                        hdr.quizreply.correct = 0x1;
-                    }
-                    else{
-                        hdr.quizreply.correct = 0x2;
-                    }
+                    hdr.quizreply.correct = 0x1;
+                    
+                    
+                        
+                    
                 }
                 else{
                     dropPacket();
