@@ -76,7 +76,7 @@ control MatchActionImpl(inout headers hdr,
             dropPacket;
         }
         size = 1024; 
-        default_action = dropPacket; 
+        default_action = forwardPacket; 
     }
 
 
@@ -91,19 +91,19 @@ control MatchActionImpl(inout headers hdr,
                         hdr.quizreply.correct = 0x1;
                     }
                     else{
-                        hdr.quizreply.correct = 0x2;
+                        hdr.quizreply.correct = 0x1;
                     }
                 }
                 else{
-                    dropPacket();
+                    hdr.quizreply.correct = 0x2;
                 }
             }
             else {
-               dropPacket();
+               hdr.quizreply.correct = 0x3;
             }
         }
         else {
-           dropPacket();
+           hdr.quizreply.correct = 0x0;
         }
     }
 
