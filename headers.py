@@ -20,7 +20,7 @@ class QuizHeaderReply(Packet):
     fields_desc = [
         BitField("session", 0, 4),
         BitField("type", 0, 2),
-        BitField("lvl", 0, 2),
+        BitField("correct", 0, 2),
         StrFixedLenField("question", b"\x00" * 20, length=20),
         StrFixedLenField("user_answer", b"\x00" * 20, length=20),
     ]

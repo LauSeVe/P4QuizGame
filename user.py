@@ -49,11 +49,11 @@ try:
 
     bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
     custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=00, lvl = userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
-    request_packet_in = "./requestQuiz/packet_in.pcap"
+    request_packet_in = "./requestQuiz/packets_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
     # Wait until request_packet_out is created
-    request_packet_out = "./requestQuiz/packet_out.pcap"
+    request_packet_out = "./requestQuiz/packets_out.pcap"
     if wait_for_file(request_packet_out):
     # Print the question and options from the packet_out
         packets = rdpcap(request_packet_out)
@@ -94,13 +94,14 @@ try:
 
 
     # Create the header to reply the quiz
+    correct_reply_packet = 0;
     bind_layers(Ether, QuizHeaderReply, type=TYPE_QUIZ_REPLY)
-    custom_packet_reply = Ether(type = TYPE_QUIZ_REPLY) / QuizHeaderReply(session=session_request, type=2, lvl=lvl_request, question=question_text_request, user_answer=userAnswer) 
-    reply_packet_in = "./replyQuiz/packet_out.pcap"
+    custom_packet_reply = Ether(type = TYPE_QUIZ_REPLY) / QuizHeaderReply(session=session_request, type=2, correct=correct_reply_packet, question=question_text_request, user_answer=userAnswer) 
+    reply_packet_in = "./replyQuiz/packets_in.pcap"
     wrpcap(reply_packet_in, custom_packet_reply)
 
     # Wait until reply_packet_out is created
-    reply_packet_out = "./replyQuiz/packet_out.pcap"
+    reply_packet_out = "./replyQuiz/packets_out.pcap"
     if wait_for_file(reply_packet_out):
     # Print the question and options from the packet_out
         packets = rdpcap(reply_packet_out)
@@ -111,13 +112,13 @@ try:
                 quizHeaderReply = packet[QuizHeaderReply]
                 session_reply = quizHeaderReply.session
                 type_reply = quizHeaderReply.type
-                lvl_reply = quizHeaderReply.lvl
+                correct_reply = quizHeaderReply.correct
                 question_text_reply = quizHeaderReply.question.decode('utf-8').split('\x00')[0]
-                correct_text_reply = quizHeaderReply.user_answer.decode('utf-8').split('\x00')[0]
+                correct_text_reply = quizHeaderReply.user_answer
                 print(f"{correct_text_reply}")
-                if(correct_text_reply == "Correct"):
+                if(correct_text_reply == 1):
                     print(f"Congratulations, your answer is correct!")
-                elif(correct_text_reply == "Incorrect"):
+                elif(correct_text_reply == 2):
                     print(f"Your answer is not correct, keep trying.")
                 else:
                     print(f"There was a problem.")

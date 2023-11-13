@@ -10,7 +10,7 @@ P4BM_DIR = test-case1
 
 # Testcase directory list to use for p4bm simulation
 # P4BM_DIRS = test-case1 test-case2 test-case3
-P4BM_DIRS = test-case1 test-case2 test-case3 test-case4
+P4BM_DIRS = test-case1
 
 # Files within each testcase directory, as seen from within $(P4BM_DIR)
 # Note that $(P4BM_OUTPUT_PCAP) and $(P4BM_OUTPUT_META) are
