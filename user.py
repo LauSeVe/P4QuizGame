@@ -36,19 +36,19 @@ try:
         userLevel = 2
     elif (user_lvl.upper() == 'D' or user_lvl.upper() == "LVL4" or user_lvl=="4"):
         userLevel = 3
-    else: 
+    else:
         print("Invalid input.")
         exit()
 
     # Create the header to request the quiz
     userSession = random.randint(0, 15)
-    packetQuestion="Spain"
-    packetAnswer1="Madrid"
-    packetAnswer2="Spain"
-    packetAnswer3="Spain"
+    packetQuestion = {userSession}
+    packetAnswer1= {userSession}
+    packetAnswer2= {userSession}
+    packetAnswer3= {userSession}
 
     bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
-    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=00, lvl = userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
+    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=00, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
     request_packet_in = "./requestQuiz/test-case1/packets_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
@@ -77,7 +77,7 @@ try:
     # Handle the case when the timeout is reached
         print("File not created within the specified timeout.")
         exit()
-    
+
     # Prompt the user to select an option
     user_answer = input("Select the option: ")
 

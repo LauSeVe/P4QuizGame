@@ -1,0 +1,50 @@
+[05:50:14.370] [bmv2] [D] [thread 3665023] Set default default entry for table 'tbl_act': act_0 - 
+[05:50:14.370] [bmv2] [D] [thread 3665023] Set default default entry for table 'MatchActionImpl.lvl1': MatchActionImpl.dropPacket - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'MatchActionImpl.lvl2': MatchActionImpl.dropPacket - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'MatchActionImpl.lvl3': MatchActionImpl.dropPacket - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'MatchActionImpl.lvl4': MatchActionImpl.dropPacket - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'tbl_act_0': act - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'tbl_act_1': act_1 - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'tbl_act_2': act_2 - 
+[05:50:14.371] [bmv2] [D] [thread 3665023] Set default default entry for table 'tbl_act_3': act_3 - 
+[05:50:14.843] [bmv2] [T] [thread 3665043] bm_get_config
+[05:50:14.855] [bmv2] [T] [thread 3665043] run_traffic
+[05:50:14.855] [bmv2] [D] [thread 3665043] Interface = packets
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser 'parser': start
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Extracting header 'ethernet'
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser state 'start': key is 1111
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser 'parser' entering state 'parse_quizrequest'
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Extracting header 'quizrequest'
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser state 'parse_quizrequest' has no switch, going to default next state
+[05:50:14.857] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] Bytes parsed: 95
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Parser 'parser': end
+[05:50:14.857] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Pipeline 'ingress': start
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(140) Condition "hdr.ethernet.isValid()" (node_2) is true
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(141) Condition "hdr.quizrequest.isValid()" (node_3) is true
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(142) Condition "hdr.quizrequest.type == 0" (node_4) is true
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] Applying table 'tbl_act'
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Looking up key:
+
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Table 'tbl_act': miss
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Action entry is act_0 - 
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] Action act_0
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(143) Primitive hdr.quizrequest.type = 1
+[05:50:14.858] [bmv2] [D] [thread 3665043] Primitive assign results in quizrequest.type = 0x1
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(144) Condition "hdr.quizrequest.lvl == 0" (node_6) is false
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(147) Condition "hdr.quizrequest.lvl == 1" (node_8) is true
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] Applying table 'MatchActionImpl.lvl2'
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Looking up key:
+* hdr.quizrequest.question: 0200000000000000000000000000000000000000
+
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Table 'MatchActionImpl.lvl2': miss
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Action entry is MatchActionImpl.dropPacket - 
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] Action MatchActionImpl.dropPacket
+[05:50:14.858] [bmv2] [T] [thread 3665043] [0.0] [cxt 0] program.p4(67) Primitive smeta.drop = 1
+[05:50:14.858] [bmv2] [D] [thread 3665043] Primitive assign results in standard_metadata_t.drop = 0x1
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Pipeline 'ingress': end
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Deparser 'deparser': start
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Deparsing header 'ethernet'
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Deparsing header 'quizrequest'
+[05:50:14.858] [bmv2] [D] [thread 3665043] [0.0] [cxt 0] Deparser 'deparser': end
+[05:50:14.859] [bmv2] [T] [thread 3665043] exit

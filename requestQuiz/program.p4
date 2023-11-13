@@ -75,7 +75,7 @@ control MatchActionImpl(inout headers hdr,
     }
 
     table lvl1 {
-        key = {hdr.quizrequest.session : exact;}
+        key = {hdr.quizrequest.question : exact;}
         actions = { 
             lvl1Forward;
             dropPacket;
@@ -92,7 +92,7 @@ control MatchActionImpl(inout headers hdr,
     }
 
     table lvl2 {
-        key = {hdr.quizrequest.session : exact;}
+        key = {hdr.quizrequest.question : exact;}
         actions = { 
             lvl2Forward;
             dropPacket;
@@ -109,7 +109,7 @@ control MatchActionImpl(inout headers hdr,
     }
 
     table lvl3 {
-        key = {hdr.quizrequest.session : exact;}
+        key = {hdr.quizrequest.question : exact;}
         actions = { 
             lvl3Forward;
             dropPacket;
@@ -126,7 +126,7 @@ control MatchActionImpl(inout headers hdr,
     }
 
     table lvl4 {
-        key = {hdr.quizrequest.session : exact;}
+        key = {hdr.quizrequest.question : exact;}
         actions = { 
             lvl4Forward;
             dropPacket;
@@ -139,8 +139,8 @@ control MatchActionImpl(inout headers hdr,
     apply {
         if (hdr.ethernet.isValid()){
             if (hdr.quizrequest.isValid()){
-                if (hdr.quizrequest.type == 1){
-                    hdr.quizrequest.type = 2;
+                if (hdr.quizrequest.type == 0){
+                    hdr.quizrequest.type = 1;
                     if(hdr.quizrequest.lvl == 0){
                         lvl1.apply();
                     }
@@ -154,19 +154,19 @@ control MatchActionImpl(inout headers hdr,
                         lvl4.apply();
                     }
                     else{
-                        dropPacket();
+                        hdr.quizrequest.type = 0;
                     }
                 }
                 else{
-                    dropPacket();
+                    hdr.quizrequest.type = 2;
                 }
             }
             else {
-               dropPacket();
+               hdr.quizrequest.type = 3;
             }
         }
         else {
-           dropPacket();
+           hdr.quizrequest.type = 1;
         }
     }
 
