@@ -18,46 +18,87 @@ try:
             id = item['Id']
             country = item['Country']
             country_extra_bytes = 20 - len(country.encode("utf-8"))
-            print(f"{country}")
             country_bytes = country.encode("utf-8") + b'\x00' * country_extra_bytes
-            print(f"{country_bytes}, {country_bytes.hex()}")
             answer1 = item['Answer1']
             answer2 = item['Answer2']
             answer3 = item['Answer3']
-            formatted_content = f"table_add lvl1 lvl1Foward 0x{country_bytes.hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
+            correct_index = item['Correct']
+            if (correct_index == 0):
+                correct_answer = answer1
+            elif (correct_index == 1):
+                correct_answer = answer2
+            elif (correct_index == 2):
+                correct_answer = answer3
+            correct_answer_extra_bytes = 20 - len(correct_answer.encode("utf-8"))
+            correct_answer_bytes = correct_answer.encode("utf-8") + b'\x00' * correct_answer_extra_bytes
+            formatted_content = f"table_add comprobation forwardPacket 0x{country_bytes.hex()} => 0x{correct_answer_bytes.hex()} \n"
             file.write(formatted_content)
 
         # lvl2
         for item in data['lvl2']:
             id = item['Id']
             country = item['Country']
+            country_extra_bytes = 20 - len(country.encode("utf-8"))
+            country_bytes = country.encode("utf-8") + b'\x00' * country_extra_bytes
             answer1 = item['Answer1']
             answer2 = item['Answer2']
             answer3 = item['Answer3']
-            formatted_content = f"table_add lvl2 lvl2Foward 0x{country.encode('utf-8').hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
+            correct_index = item['Correct']
+            if (correct_index == 0):
+                correct_answer = answer1
+            elif (correct_index == 1):
+                correct_answer = answer2
+            elif (correct_index == 2):
+                correct_answer = answer3
+            correct_answer_extra_bytes = 20 - len(correct_answer.encode("utf-8"))
+            correct_answer_bytes = correct_answer.encode("utf-8") + b'\x00' * correct_answer_extra_bytes
+            formatted_content = f"table_add comprobation forwardPacket 0x{country_bytes.hex()} => 0x{correct_answer_bytes.hex()} \n"
             file.write(formatted_content)
 
         # lvl3
         for item in data['lvl3']:
             id = item['Id']
             country = item['Country']
+            country_extra_bytes = 20 - len(country.encode("utf-8"))
+            country_bytes = country.encode("utf-8") + b'\x00' * country_extra_bytes
             answer1 = item['Answer1']
             answer2 = item['Answer2']
             answer3 = item['Answer3']
-            formatted_content = f"table_add lvl3 lvl3Foward 0x{country.encode('utf-8').hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
+            correct_index = item['Correct']
+            if (correct_index == 0):
+                correct_answer = answer1
+            elif (correct_index == 1):
+                correct_answer = answer2
+            elif (correct_index == 2):
+                correct_answer = answer3
+            correct_answer_extra_bytes = 20 - len(correct_answer.encode("utf-8"))
+            correct_answer_bytes = correct_answer.encode("utf-8") + b'\x00' * correct_answer_extra_bytes
+            formatted_content = f"table_add comprobation forwardPacket 0x{country_bytes.hex()} => 0x{correct_answer_bytes.hex()} \n"
             file.write(formatted_content)
 
         # lvl4
         for item in data['lvl4']:
             id = item['Id']
             country = item['Country']
+            country_extra_bytes = 20 - len(country.encode("utf-8"))
+            country_bytes = country.encode("utf-8") + b'\x00' * country_extra_bytes
             answer1 = item['Answer1']
             answer2 = item['Answer2']
             answer3 = item['Answer3']
-            formatted_content = f"table_add lvl4 lvl4Foward 0x{country.encode('utf-8').hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
+            correct_index = item['Correct']
+            if (correct_index == 0):
+                correct_answer = answer1
+            elif (correct_index == 1):
+                correct_answer = answer2
+            elif (correct_index == 2):
+                correct_answer = answer3
+            correct_answer_extra_bytes = 20 - len(correct_answer.encode("utf-8"))
+            correct_answer_bytes = correct_answer.encode("utf-8") + b'\x00' * correct_answer_extra_bytes
+            formatted_content = f"table_add comprobation forwardPacket 0x{country_bytes.hex()} => 0x{correct_answer_bytes.hex()} \n"
+            file.write(formatted_content)
 
         formatted_content = f"\n # run traffic \n run_traffic packets \n #end \n exit \n"
-        file.write(formatted_content) 
+        file.write(formatted_content)
 
 except Exception as e:
     print(f"An error occurred: {e}")
