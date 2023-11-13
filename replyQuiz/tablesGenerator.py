@@ -17,10 +17,14 @@ try:
         for item in data['lvl1']:
             id = item['Id']
             country = item['Country']
+            country_extra_bytes = 20 - len(country.encode("utf-8"))
+            print(f"{country}")
+            country_bytes = country.encode("utf-8") + b'\x00' * country_extra_bytes
+            print(f"{country_bytes}, {country_bytes.hex()}")
             answer1 = item['Answer1']
             answer2 = item['Answer2']
             answer3 = item['Answer3']
-            formatted_content = f"table_add lvl1 lvl1Foward 0x{country.encode('utf-8').hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
+            formatted_content = f"table_add lvl1 lvl1Foward 0x{country_bytes.hex()} => 0x{answer1.encode('utf-8').hex()} 0x{answer2.encode('utf-8').hex()} 0x{answer3.encode('utf-8').hex()} \n"
             file.write(formatted_content)
 
         # lvl2
@@ -57,4 +61,3 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
-
