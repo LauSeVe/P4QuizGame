@@ -41,14 +41,14 @@ try:
         exit()
 
     # Create the header to request the quiz
-    userSession = 10
+    userSession = random.randint(0, 15)
     packetQuestion = {userSession}
     packetAnswer1= {userSession}
     packetAnswer2= {userSession}
     packetAnswer3= {userSession}
 
     bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
-    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=1, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
+    custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=0, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
     request_packet_in = "./requestQuiz/test-case1/packets_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
