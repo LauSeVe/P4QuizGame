@@ -20,8 +20,8 @@
             "Id": 2,
             "Country": "Brazil",
             "Answer1": "Rio de Janeiro",
-            "Answer2": "São Paulo",
-            "Answer3": "Brasília",
+            "Answer2": "Sao Paulo",
+            "Answer3": "Brasilia",
             "Correct": 2
         },
         {
@@ -100,7 +100,7 @@
             "Id": 12,
             "Country": "Mexico",
             "Answer1": "Mexico City",
-            "Answer2": "Cancún",
+            "Answer2": "Cancun",
             "Answer3": "Guadalajara",
             "Correct": 0
         },
@@ -148,115 +148,115 @@
         },
         {
             "Id": 2,
-            "Country": "Japan",
-            "Answer1": "Osaka",
-            "Answer2": "Kyoto",
-            "Answer3": "Hiroshima",
+            "Country": "United States",
+            "Answer1": "New York",
+            "Answer2": "Los Angeles",
+            "Answer3": "Washington D.C.",
             "Correct": 2
         },
         {
             "Id": 3,
-            "Country": "Canada",
-            "Answer1": "Montreal",
-            "Answer2": "Calgary",
-            "Answer3": "Quebec City",
-            "Correct": 1
-        },
-        {
-            "Id": 4,
-            "Country": "Australia",
-            "Answer1": "Canberra",
-            "Answer2": "Adelaide",
-            "Answer3": "Perth",
+            "Country": "Norway",
+            "Answer1": "Oslo",
+            "Answer2": "Bergen",
+            "Answer3": "Trondheim",
             "Correct": 0
         },
         {
-            "Id": 5,
-            "Country": "Brazil",
-            "Answer1": "Salvador",
-            "Answer2": "Fortaleza",
-            "Answer3": "Recife",
+            "Id": 4,
+            "Country": "Denmark",
+            "Answer1": "Aarhus",
+            "Answer2": "Odense",
+            "Answer3": "Copenhagen",
             "Correct": 2
+        },
+        {
+            "Id": 5,
+            "Country": "Iceland",
+            "Answer1": "Akureryri",
+            "Answer2": "Reykjavik",
+            "Answer3": "Kopavogur",
+            "Correct": 1
         },
           {
             "Id": 6,
-            "Country": "Germany",
-            "Answer1": "Hamburg",
-            "Answer2": "Frankfurt",
-            "Answer3": "Cologne",
-            "Correct": 1
+            "Country": "Belgium",
+            "Answer1": "Ghent",
+            "Answer2": "Antwerp",
+            "Answer3": "Brussels",
+            "Correct": 2
         },
         {
             "Id": 7,
-            "Country": "Mexico",
-            "Answer1": "Monterrey",
-            "Answer2": "Puebla",
-            "Answer3": "Tijuana",
+            "Country": "Hungary",
+            "Answer1": "Budapest",
+            "Answer2": "Debrecen",
+            "Answer3": "Szeged",
             "Correct": 0
         },
         {
             "Id": 8,
-            "Country": "India",
-            "Answer1": "Bangalore",
-            "Answer2": "Kolkata",
-            "Answer3": "Chennai",
+            "Country": "Slovakia",
+            "Answer1": "Bratislava",
+            "Answer2": "Kosice",
+            "Answer3": "Presov",
             "Correct": 0
         },
         {
             "Id": 9,
-            "Country": "Russia",
-            "Answer1": "Kazan",
-            "Answer2": "Yekaterinburg",
-            "Answer3": "Novosibirsk",
-            "Correct": 2
+            "Country": "Romania",
+            "Answer1": "Bucharest",
+            "Answer2": "Cluj-Napoca",
+            "Answer3": "Timisoara",
+            "Correct": 0
         },
         {
             "Id": 10,
-            "Country": "Argentina",
-            "Answer1": "Rosario",
-            "Answer2": "Mendoza",
-            "Answer3": "Cordoba",
+            "Country": "Serbia",
+            "Answer1": "Belgrade",
+            "Answer2": "Novi Sad",
+            "Answer3": "Nis",
             "Correct": 0
         },
         {
             "Id": 11,
-            "Country": "France",
-            "Answer1": "Lyon",
-            "Answer2": "Marseille",
-            "Answer3": "Toulouse",
-            "Correct": 1
-        },
-        {
-            "Id": 12,
-            "Country": "China",
-            "Answer1": "Guangzhou",
-            "Answer2": "Shenzhen",
-            "Answer3": "Chengdu",
+            "Country": "Cyprus",
+            "Answer1": "Nicosia",
+            "Answer2": "Limassol",
+            "Answer3": "Larnaca",
             "Correct": 0
         },
         {
-            "Id": 13,
-            "Country": "United Kingdom",
-            "Answer1": "Birmingham",
-            "Answer2": "Glasgow",
-            "Answer3": "Liverpool",
+            "Id": 12,
+            "Country": "Lithuania",
+            "Answer1": "Kaunas",
+            "Answer2": "Vilnius",
+            "Answer3": "Klaipeda",
             "Correct": 1
         },
         {
+            "Id": 13,
+            "Country": "Latvia",
+            "Answer1": "Daugavpils",
+            "Answer2": "Liepaja",
+            "Answer3": "Riga",
+            "Correct": 2
+        },
+        {
             "Id": 14,
-            "Country": "Spain",
-            "Answer1": "Valencia",
-            "Answer2": "Zaragoza",
-            "Answer3": "Málaga",
+            "Country": "Estonia",
+            "Answer1": "Narva",
+            "Answer2": "Tartu",
+            "Answer3": "Tallinn",
             "Correct": 2
         },
         {
             "Id": 15,
-            "Country": "Italy",
-            "Answer1": "Milan",
-            "Answer2": "Naples",
-            "Answer3": "Turin",
-            "Correct": 0
+            "Country": "Singapore",
+            "Answer1": "Woodlands",
+            "Answer2": "Singapore",
+            "Answer3": "Jurong East",
+            "Correct": 1
         }
     ],
     "lvl3": [
@@ -270,11 +270,11 @@
         },
         {
             "Id": 1,
-            "Country": "South Korea",
-            "Answer1": "Seoul",
-            "Answer2": "Busan",
-            "Answer3": "Incheon",
-            "Correct": 0
+            "Country": "Albania",
+            "Answer1": "Durres",
+            "Answer2": "Vlore",
+            "Answer3": "Tirana",
+            "Correct": 2
         },
         {
             "Id": 2,
@@ -297,7 +297,7 @@
             "Country": "Sweden",
             "Answer1": "Stockholm",
             "Answer2": "Gothenburg",
-            "Answer3": "Malmö",
+            "Answer3": "Malm�",
             "Correct": 0
         },
         {
@@ -318,19 +318,19 @@
         },
         {
             "Id": 7,
-            "Country": "Argentina",
-            "Answer1": "Rosario",
-            "Answer2": "Mendoza",
-            "Answer3": "Cordoba",
-            "Correct": 0
+            "Country": "Bulgaria",
+            "Answer1": "Plovdiv",
+            "Answer2": "Sofia",
+            "Answer3": "Varna",
+            "Correct": 1
         },
         {
             "Id": 8,
-            "Country": "Canada",
-            "Answer1": "Montreal",
-            "Answer2": "Calgary",
-            "Answer3": "Quebec City",
-            "Correct": 1
+            "Country": "Croatia",
+            "Answer1": "Zagreb",
+            "Answer2": "Split",
+            "Answer3": "Rijeka",
+            "Correct": 0
         },
         {
             "Id": 9,
@@ -343,8 +343,8 @@
         {
             "Id": 10,
             "Country": "Colombia",
-            "Answer1": "Bogotá",
-            "Answer2": "Medellín",
+            "Answer1": "Bogota",
+            "Answer2": "Medellin",
             "Answer3": "Cali",
             "Correct": 0
         },
@@ -521,4 +521,3 @@
     ]
 }
 
-  

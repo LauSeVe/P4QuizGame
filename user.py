@@ -106,8 +106,6 @@ try:
     # Print the question and options from the packet_out
         packets = rdpcap(reply_packet_out)
         for packet in packets:
-            print(packet.summary())
-            packet.show()
             if QuizHeaderReply in packet:
                 quizHeaderReply = packet[QuizHeaderReply]
                 session_reply = quizHeaderReply.session
@@ -115,11 +113,16 @@ try:
                 correct_reply = quizHeaderReply.correct
                 correct_text_reply = quizHeaderReply.user_answer.decode('utf-8').split('\x00')[0]
                 question_text_reply = quizHeaderReply.question
+                answer_reply = quizHeaderReply.correct
+                answer_text_reply = answer_reply.decode('utf-8').split('\x00')[0]
                 if(correct_reply == 1):
                     print(f"Congratulations, your answer is correct!")
+                    print(f"The correct answer was {answer_text_reply}")
                 elif(correct_reply == 2):
                     print(f"Your answer is not correct, keep trying.")
+                    print(f"The correct answer was {answer_text_reply}")
                 else:
+                    print(f"The correct answer was {answer_text_reply}")
                     print(f"There was a problem.")
     else:
     # Handle the case when the timeout is reached
