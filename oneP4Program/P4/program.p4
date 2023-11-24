@@ -2,6 +2,7 @@
 #include <xsa.p4>
 
 const bit<16> TYPE_QUIZREQUEST = 0x1111;
+const bit<16> TYPE_QUIZREPLY = 0x2222;
 
 header ethernet_t {
     bit<48> dstAddr;      // Destination MAC address.
@@ -19,9 +20,18 @@ header quizrequest_t {
     bit<160> answer3;
 }
 
+header quizreply_t {
+    bit<4> session;
+    bit<2> type;
+    bit<2> correct;
+    bit<160> question;
+    bit<160> user_answer;
+}
+
 struct headers {
     ethernet_t ethernet;
     quizrequest_t quizrequest;
+    quizreply_t quizreply;
 }
 
 struct smartnic_metadata {
@@ -50,6 +60,7 @@ parser ParserImpl(packet_in packet,
         packet.extract(hdr.ethernet);
         transition select(hdr.ethernet.etherType) {
             TYPE_QUIZREQUEST: parse_quizrequest; 
+            TYPE_QUIZREPLY: parse_quizreply; 
             default: accept;
         }
     }
@@ -57,6 +68,11 @@ parser ParserImpl(packet_in packet,
         packet.extract(hdr.quizrequest);
         transition accept;
     }
+    state parse_quizreply {
+        packet.extract(hdr.quizreply);
+        transition accept;
+    }
+    
 }
 
 control MatchActionImpl(inout headers hdr,
@@ -135,6 +151,20 @@ control MatchActionImpl(inout headers hdr,
         default_action = dropPacket; 
     }
 
+    action forwardPacket(bit<160> answer){ 
+        hdr.quizreply.user_answer = answer;
+    }
+
+    table comprobation {
+        key = {hdr.quizreply.question : exact;}
+        actions = { 
+            forwardPacket;
+            dropPacket;
+        }
+        size = 1024; 
+        default_action = dropPacket; 
+    }
+   
 
     apply {
         if (hdr.ethernet.isValid()){
@@ -161,16 +191,31 @@ control MatchActionImpl(inout headers hdr,
                     dropPacket();
                 }
             }
+            else if (hdr.quizreply.isValid()){
+                bit<160> user_answer_tmp = hdr.quizreply.user_answer;
+                if (hdr.quizreply.type == 2){
+                    hdr.quizreply.type = 3;
+                    comprobation.apply();
+                    if (user_answer_tmp == hdr.quizreply.user_answer){
+                    hdr.quizreply.correct = 0x1;
+                    }
+                    else {
+                    hdr.quizreply.correct = 0x2;
+                    }
+                }
+                else{
+                    dropPacket();
+                }
+            }
             else {
                dropPacket();
             }
         }
-        else {
-           dropPacket();
-        }
     }
-
+    
 }
+
+
 
 control DeparserImpl(packet_out packet,
                       in headers hdr,
@@ -179,6 +224,7 @@ control DeparserImpl(packet_out packet,
     apply {
         packet.emit(hdr.ethernet);  // Emit the Ethernet header.
         packet.emit(hdr.quizrequest);  // Emit the quizrequest header.
+        packet.emit(hdr.quizreply);  // Emit the quizreply header.
     }
 }
 

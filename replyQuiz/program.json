@@ -190,7 +190,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "program.p4",
-        "line" : 113,
+        "line" : 112,
         "column" : 8,
         "source_fragment" : "DeparserImpl"
       },
@@ -426,7 +426,7 @@
           ],
           "source_info" : {
             "filename" : "program.p4",
-            "line" : 95,
+            "line" : 94,
             "column" : 20,
             "source_fragment" : "hdr.quizreply.correct = 0x2"
           }

@@ -1,294 +1,518 @@
-[00:15:25.390] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_act': act_2 - 
-[00:15:25.390] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_act_0': act - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'MatchActionImpl.comprobation': MatchActionImpl.dropPacket - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_act_1': act_0 - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_act_2': act_1 - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_dropPacket': MatchActionImpl.dropPacket - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_dropPacket_0': MatchActionImpl.dropPacket - 
-[00:15:25.391] [bmv2] [D] [thread 425724] Set default default entry for table 'tbl_dropPacket_1': MatchActionImpl.dropPacket - 
-[00:15:25.883] [bmv2] [T] [thread 425730] bm_get_config
-[00:15:25.896] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.897] [bmv2] [D] [thread 425730] Entry 0 added to table 'MatchActionImpl.comprobation'
-[00:15:25.897] [bmv2] [D] [thread 425730] Dumping entry 0
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_act': act_2 - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_act_0': act - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'MatchActionImpl.comprobation': MatchActionImpl.dropPacket - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_act_1': act_0 - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_act_2': act_1 - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_dropPacket': MatchActionImpl.dropPacket - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_dropPacket_0': MatchActionImpl.dropPacket - 
+[00:36:33.057] [bmv2] [D] [thread 608912] Set default default entry for table 'tbl_dropPacket_1': MatchActionImpl.dropPacket - 
+[00:36:33.518] [bmv2] [T] [thread 608916] bm_get_config
+[00:36:33.531] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.531] [bmv2] [D] [thread 608916] Entry 0 added to table 'MatchActionImpl.comprobation'
+[00:36:33.532] [bmv2] [D] [thread 608916] Dumping entry 0
 Match key:
 * hdr.quizreply.question: EXACT     4a6170616e000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 546f6b796f000000000000000000000000000000,
 
-[00:15:25.898] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.898] [bmv2] [D] [thread 425730] Entry 1 added to table 'MatchActionImpl.comprobation'
-[00:15:25.899] [bmv2] [D] [thread 425730] Dumping entry 1
+[00:36:33.533] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.533] [bmv2] [D] [thread 608916] Entry 1 added to table 'MatchActionImpl.comprobation'
+[00:36:33.533] [bmv2] [D] [thread 608916] Dumping entry 1
 Match key:
 * hdr.quizreply.question: EXACT     4765726d616e7900000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4265726c696e0000000000000000000000000000,
 
-[00:15:25.899] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.900] [bmv2] [D] [thread 425730] Entry 2 added to table 'MatchActionImpl.comprobation'
-[00:15:25.900] [bmv2] [D] [thread 425730] Dumping entry 2
+[00:36:33.534] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.534] [bmv2] [D] [thread 608916] Entry 2 added to table 'MatchActionImpl.comprobation'
+[00:36:33.534] [bmv2] [D] [thread 608916] Dumping entry 2
 Match key:
 * hdr.quizreply.question: EXACT     4272617a696c0000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 42726173696c6961000000000000000000000000,
 
-[00:15:25.901] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.901] [bmv2] [D] [thread 425730] Entry 3 added to table 'MatchActionImpl.comprobation'
-[00:15:25.901] [bmv2] [D] [thread 425730] Dumping entry 3
+[00:36:33.535] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.535] [bmv2] [D] [thread 608916] Entry 3 added to table 'MatchActionImpl.comprobation'
+[00:36:33.535] [bmv2] [D] [thread 608916] Dumping entry 3
 Match key:
 * hdr.quizreply.question: EXACT     496e646961000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 44656c6869000000000000000000000000000000,
 
-[00:15:25.902] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.902] [bmv2] [D] [thread 425730] Entry 4 added to table 'MatchActionImpl.comprobation'
-[00:15:25.902] [bmv2] [D] [thread 425730] Dumping entry 4
+[00:36:33.536] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.536] [bmv2] [D] [thread 608916] Entry 4 added to table 'MatchActionImpl.comprobation'
+[00:36:33.536] [bmv2] [D] [thread 608916] Dumping entry 4
 Match key:
 * hdr.quizreply.question: EXACT     4368696e61000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4265696a696e6700000000000000000000000000,
 
-[00:15:25.903] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.903] [bmv2] [D] [thread 425730] Entry 5 added to table 'MatchActionImpl.comprobation'
-[00:15:25.903] [bmv2] [D] [thread 425730] Dumping entry 5
+[00:36:33.537] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.537] [bmv2] [D] [thread 608916] Entry 5 added to table 'MatchActionImpl.comprobation'
+[00:36:33.537] [bmv2] [D] [thread 608916] Dumping entry 5
 Match key:
 * hdr.quizreply.question: EXACT     556e69746564204b696e67646f6d000000000000
 Action entry: MatchActionImpl.forwardPacket - 4c6f6e646f6e0000000000000000000000000000,
 
-[00:15:25.904] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.904] [bmv2] [D] [thread 425730] Entry 6 added to table 'MatchActionImpl.comprobation'
-[00:15:25.904] [bmv2] [D] [thread 425730] Dumping entry 6
+[00:36:33.538] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.538] [bmv2] [D] [thread 608916] Entry 6 added to table 'MatchActionImpl.comprobation'
+[00:36:33.538] [bmv2] [D] [thread 608916] Dumping entry 6
 Match key:
 * hdr.quizreply.question: EXACT     4175737472616c69610000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4d656c626f75726e650000000000000000000000,
 
-[00:15:25.905] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.905] [bmv2] [D] [thread 425730] Entry 7 added to table 'MatchActionImpl.comprobation'
-[00:15:25.905] [bmv2] [D] [thread 425730] Dumping entry 7
+[00:36:33.539] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.539] [bmv2] [D] [thread 608916] Entry 7 added to table 'MatchActionImpl.comprobation'
+[00:36:33.539] [bmv2] [D] [thread 608916] Dumping entry 7
 Match key:
 * hdr.quizreply.question: EXACT     43616e6164610000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4f74746177610000000000000000000000000000,
 
-[00:15:25.906] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.906] [bmv2] [D] [thread 425730] Entry 8 added to table 'MatchActionImpl.comprobation'
-[00:15:25.906] [bmv2] [D] [thread 425730] Dumping entry 8
+[00:36:33.540] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.540] [bmv2] [D] [thread 608916] Entry 8 added to table 'MatchActionImpl.comprobation'
+[00:36:33.540] [bmv2] [D] [thread 608916] Dumping entry 8
 Match key:
 * hdr.quizreply.question: EXACT     4974616c79000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 526f6d6500000000000000000000000000000000,
 
-[00:15:25.907] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.907] [bmv2] [D] [thread 425730] Entry 9 added to table 'MatchActionImpl.comprobation'
-[00:15:25.908] [bmv2] [D] [thread 425730] Dumping entry 9
+[00:36:33.541] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.541] [bmv2] [D] [thread 608916] Entry 9 added to table 'MatchActionImpl.comprobation'
+[00:36:33.541] [bmv2] [D] [thread 608916] Dumping entry 9
 Match key:
 * hdr.quizreply.question: EXACT     537061696e000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4d61647269640000000000000000000000000000,
 
-[00:15:25.909] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.909] [bmv2] [D] [thread 425730] Entry 10 added to table 'MatchActionImpl.comprobation'
-[00:15:25.909] [bmv2] [D] [thread 425730] Dumping entry 10
+[00:36:33.542] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.542] [bmv2] [D] [thread 608916] Entry 10 added to table 'MatchActionImpl.comprobation'
+[00:36:33.543] [bmv2] [D] [thread 608916] Dumping entry 10
 Match key:
 * hdr.quizreply.question: EXACT     536f757468204b6f726561000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 53656f756c000000000000000000000000000000,
 
-[00:15:25.910] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.910] [bmv2] [D] [thread 425730] Entry 11 added to table 'MatchActionImpl.comprobation'
-[00:15:25.910] [bmv2] [D] [thread 425730] Dumping entry 11
+[00:36:33.543] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.543] [bmv2] [D] [thread 608916] Entry 11 added to table 'MatchActionImpl.comprobation'
+[00:36:33.543] [bmv2] [D] [thread 608916] Dumping entry 11
 Match key:
 * hdr.quizreply.question: EXACT     5275737369610000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4d6f73636f770000000000000000000000000000,
 
-[00:15:25.911] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.911] [bmv2] [D] [thread 425730] Entry 12 added to table 'MatchActionImpl.comprobation'
-[00:15:25.911] [bmv2] [D] [thread 425730] Dumping entry 12
+[00:36:33.544] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.544] [bmv2] [D] [thread 608916] Entry 12 added to table 'MatchActionImpl.comprobation'
+[00:36:33.544] [bmv2] [D] [thread 608916] Dumping entry 12
 Match key:
 * hdr.quizreply.question: EXACT     4d657869636f0000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4d657869636f2043697479000000000000000000,
 
-[00:15:25.912] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.912] [bmv2] [D] [thread 425730] Entry 13 added to table 'MatchActionImpl.comprobation'
-[00:15:25.912] [bmv2] [D] [thread 425730] Dumping entry 13
+[00:36:33.545] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.545] [bmv2] [D] [thread 608916] Entry 13 added to table 'MatchActionImpl.comprobation'
+[00:36:33.545] [bmv2] [D] [thread 608916] Dumping entry 13
 Match key:
 * hdr.quizreply.question: EXACT     4e65746865726c616e6473000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 416d7374657264616d0000000000000000000000,
 
-[00:15:25.912] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.913] [bmv2] [D] [thread 425730] Entry 14 added to table 'MatchActionImpl.comprobation'
-[00:15:25.913] [bmv2] [D] [thread 425730] Dumping entry 14
+[00:36:33.545] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.546] [bmv2] [D] [thread 608916] Entry 14 added to table 'MatchActionImpl.comprobation'
+[00:36:33.546] [bmv2] [D] [thread 608916] Dumping entry 14
 Match key:
 * hdr.quizreply.question: EXACT     417267656e74696e610000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4275656e6f732041697265730000000000000000,
 
-[00:15:25.913] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.913] [bmv2] [D] [thread 425730] Entry 15 added to table 'MatchActionImpl.comprobation'
-[00:15:25.913] [bmv2] [D] [thread 425730] Dumping entry 15
+[00:36:33.546] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.546] [bmv2] [D] [thread 608916] Entry 15 added to table 'MatchActionImpl.comprobation'
+[00:36:33.546] [bmv2] [D] [thread 608916] Dumping entry 15
 Match key:
 * hdr.quizreply.question: EXACT     4672616e63650000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 5061726973000000000000000000000000000000,
 
-[00:15:25.914] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.914] [bmv2] [D] [thread 425730] Entry 16 added to table 'MatchActionImpl.comprobation'
-[00:15:25.914] [bmv2] [D] [thread 425730] Dumping entry 16
+[00:36:33.547] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.547] [bmv2] [D] [thread 608916] Entry 16 added to table 'MatchActionImpl.comprobation'
+[00:36:33.547] [bmv2] [D] [thread 608916] Dumping entry 16
 Match key:
 * hdr.quizreply.question: EXACT     4567797074000000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 436169726f000000000000000000000000000000,
 
-[00:15:25.915] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.915] [bmv2] [D] [thread 425730] Entry 17 added to table 'MatchActionImpl.comprobation'
-[00:15:25.915] [bmv2] [D] [thread 425730] Dumping entry 17
+[00:36:33.548] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.548] [bmv2] [D] [thread 608916] Entry 17 added to table 'MatchActionImpl.comprobation'
+[00:36:33.548] [bmv2] [D] [thread 608916] Dumping entry 17
 Match key:
 * hdr.quizreply.question: EXACT     536f757468204166726963610000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4361706520546f776e0000000000000000000000,
 
-[00:15:25.915] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.916] [bmv2] [D] [thread 425730] Entry 18 added to table 'MatchActionImpl.comprobation'
-[00:15:25.916] [bmv2] [D] [thread 425730] Dumping entry 18
+[00:36:33.548] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.549] [bmv2] [D] [thread 608916] Entry 18 added to table 'MatchActionImpl.comprobation'
+[00:36:33.549] [bmv2] [D] [thread 608916] Dumping entry 18
 Match key:
 * hdr.quizreply.question: EXACT     556e697465642053746174657300000000000000
 Action entry: MatchActionImpl.forwardPacket - 57617368696e67746f6e20442e432e0000000000,
 
-[00:15:25.916] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.917] [bmv2] [D] [thread 425730] Entry 19 added to table 'MatchActionImpl.comprobation'
-[00:15:25.917] [bmv2] [D] [thread 425730] Dumping entry 19
+[00:36:33.549] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.549] [bmv2] [D] [thread 608916] Entry 19 added to table 'MatchActionImpl.comprobation'
+[00:36:33.549] [bmv2] [D] [thread 608916] Dumping entry 19
 Match key:
 * hdr.quizreply.question: EXACT     4e6f727761790000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4f736c6f00000000000000000000000000000000,
 
-[00:15:25.917] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.917] [bmv2] [D] [thread 425730] Entry 20 added to table 'MatchActionImpl.comprobation'
-[00:15:25.917] [bmv2] [D] [thread 425730] Dumping entry 20
+[00:36:33.550] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.550] [bmv2] [D] [thread 608916] Entry 20 added to table 'MatchActionImpl.comprobation'
+[00:36:33.550] [bmv2] [D] [thread 608916] Dumping entry 20
 Match key:
 * hdr.quizreply.question: EXACT     44656e6d61726b00000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 436f70656e686167656e00000000000000000000,
 
-[00:15:25.918] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.918] [bmv2] [D] [thread 425730] Entry 21 added to table 'MatchActionImpl.comprobation'
-[00:15:25.918] [bmv2] [D] [thread 425730] Dumping entry 21
+[00:36:33.551] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.551] [bmv2] [D] [thread 608916] Entry 21 added to table 'MatchActionImpl.comprobation'
+[00:36:33.551] [bmv2] [D] [thread 608916] Dumping entry 21
 Match key:
 * hdr.quizreply.question: EXACT     4963656c616e6400000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 5265796b6a6176696b0000000000000000000000,
 
-[00:15:25.918] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.919] [bmv2] [D] [thread 425730] Entry 22 added to table 'MatchActionImpl.comprobation'
-[00:15:25.919] [bmv2] [D] [thread 425730] Dumping entry 22
+[00:36:33.551] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.551] [bmv2] [D] [thread 608916] Entry 22 added to table 'MatchActionImpl.comprobation'
+[00:36:33.551] [bmv2] [D] [thread 608916] Dumping entry 22
 Match key:
 * hdr.quizreply.question: EXACT     42656c6769756d00000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4272757373656c73000000000000000000000000,
 
-[00:15:25.919] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.919] [bmv2] [D] [thread 425730] Entry 23 added to table 'MatchActionImpl.comprobation'
-[00:15:25.919] [bmv2] [D] [thread 425730] Dumping entry 23
+[00:36:33.552] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.552] [bmv2] [D] [thread 608916] Entry 23 added to table 'MatchActionImpl.comprobation'
+[00:36:33.552] [bmv2] [D] [thread 608916] Dumping entry 23
 Match key:
 * hdr.quizreply.question: EXACT     48756e6761727900000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4275646170657374000000000000000000000000,
 
-[00:15:25.920] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.920] [bmv2] [D] [thread 425730] Entry 24 added to table 'MatchActionImpl.comprobation'
-[00:15:25.920] [bmv2] [D] [thread 425730] Dumping entry 24
+[00:36:33.553] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.553] [bmv2] [D] [thread 608916] Entry 24 added to table 'MatchActionImpl.comprobation'
+[00:36:33.553] [bmv2] [D] [thread 608916] Dumping entry 24
 Match key:
 * hdr.quizreply.question: EXACT     536c6f76616b6961000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4272617469736c61766100000000000000000000,
 
-[00:15:25.920] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.921] [bmv2] [D] [thread 425730] Entry 25 added to table 'MatchActionImpl.comprobation'
-[00:15:25.921] [bmv2] [D] [thread 425730] Dumping entry 25
+[00:36:33.553] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.554] [bmv2] [D] [thread 608916] Entry 25 added to table 'MatchActionImpl.comprobation'
+[00:36:33.554] [bmv2] [D] [thread 608916] Dumping entry 25
 Match key:
 * hdr.quizreply.question: EXACT     526f6d616e696100000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4275636861726573740000000000000000000000,
 
-[00:15:25.921] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.921] [bmv2] [D] [thread 425730] Entry 26 added to table 'MatchActionImpl.comprobation'
-[00:15:25.921] [bmv2] [D] [thread 425730] Dumping entry 26
+[00:36:33.554] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.554] [bmv2] [D] [thread 608916] Entry 26 added to table 'MatchActionImpl.comprobation'
+[00:36:33.554] [bmv2] [D] [thread 608916] Dumping entry 26
 Match key:
 * hdr.quizreply.question: EXACT     5365726269610000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 42656c6772616465000000000000000000000000,
 
-[00:15:25.922] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.922] [bmv2] [D] [thread 425730] Entry 27 added to table 'MatchActionImpl.comprobation'
-[00:15:25.922] [bmv2] [D] [thread 425730] Dumping entry 27
+[00:36:33.555] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.555] [bmv2] [D] [thread 608916] Entry 27 added to table 'MatchActionImpl.comprobation'
+[00:36:33.555] [bmv2] [D] [thread 608916] Dumping entry 27
 Match key:
 * hdr.quizreply.question: EXACT     4379707275730000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 4e69636f73696100000000000000000000000000,
 
-[00:15:25.923] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.923] [bmv2] [D] [thread 425730] Entry 28 added to table 'MatchActionImpl.comprobation'
-[00:15:25.923] [bmv2] [D] [thread 425730] Dumping entry 28
+[00:36:33.556] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.556] [bmv2] [D] [thread 608916] Entry 28 added to table 'MatchActionImpl.comprobation'
+[00:36:33.556] [bmv2] [D] [thread 608916] Dumping entry 28
 Match key:
 * hdr.quizreply.question: EXACT     4c69746875616e69610000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 56696c6e69757300000000000000000000000000,
 
-[00:15:25.924] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.924] [bmv2] [D] [thread 425730] Entry 29 added to table 'MatchActionImpl.comprobation'
-[00:15:25.924] [bmv2] [D] [thread 425730] Dumping entry 29
+[00:36:33.557] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.557] [bmv2] [D] [thread 608916] Entry 29 added to table 'MatchActionImpl.comprobation'
+[00:36:33.557] [bmv2] [D] [thread 608916] Dumping entry 29
 Match key:
 * hdr.quizreply.question: EXACT     4c61747669610000000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 5269676100000000000000000000000000000000,
 
-[00:15:25.924] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.924] [bmv2] [D] [thread 425730] Entry 30 added to table 'MatchActionImpl.comprobation'
-[00:15:25.924] [bmv2] [D] [thread 425730] Dumping entry 30
+[00:36:33.557] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.557] [bmv2] [D] [thread 608916] Entry 30 added to table 'MatchActionImpl.comprobation'
+[00:36:33.557] [bmv2] [D] [thread 608916] Dumping entry 30
 Match key:
 * hdr.quizreply.question: EXACT     4573746f6e696100000000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 54616c6c696e6e00000000000000000000000000,
 
-[00:15:25.925] [bmv2] [T] [thread 425730] bm_table_add_entry
-[00:15:25.925] [bmv2] [D] [thread 425730] Entry 31 added to table 'MatchActionImpl.comprobation'
-[00:15:25.925] [bmv2] [D] [thread 425730] Dumping entry 31
+[00:36:33.558] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.558] [bmv2] [D] [thread 608916] Entry 31 added to table 'MatchActionImpl.comprobation'
+[00:36:33.558] [bmv2] [D] [thread 608916] Dumping entry 31
 Match key:
 * hdr.quizreply.question: EXACT     53696e6761706f72650000000000000000000000
 Action entry: MatchActionImpl.forwardPacket - 53696e6761706f72650000000000000000000000,
 
-[00:15:25.926] [bmv2] [T] [thread 425730] run_traffic
-[00:15:25.926] [bmv2] [D] [thread 425730] Interface = packets
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser 'parser': start
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser 'parser' entering state 'start'
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Extracting header 'ethernet'
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser state 'start': key is 2222
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser 'parser' entering state 'parse_quizreply'
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Extracting header 'quizreply'
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser state 'parse_quizreply' has no switch, going to default next state
-[00:15:25.928] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Bytes parsed: 55
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Parser 'parser': end
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Pipeline 'ingress': start
-[00:15:25.928] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Applying table 'tbl_act'
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Looking up key:
-
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Table 'tbl_act': miss
-[00:15:25.928] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Action entry is act_2 - 
-[00:15:25.928] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Action act_2
-[00:15:25.928] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(84) Primitive bit<160> user_answer_tmp = hdr.quizreply.user_answer;
-[00:15:25.928] [bmv2] [D] [thread 425730] Primitive assign results in scalars.user_answer_tmp = 0x436169726f000000000000000000000000000000
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(85) Condition "hdr.ethernet.isValid()" (node_3) is true
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(86) Condition "hdr.quizreply.isValid()" (node_4) is true
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(87) Condition "hdr.quizreply.type == 2" (node_5) is true
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Applying table 'tbl_act_0'
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Looking up key:
-
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Table 'tbl_act_0': miss
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Action entry is act - 
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Action act
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(88) Primitive hdr.quizreply.type = 3
-[00:15:25.929] [bmv2] [D] [thread 425730] Primitive assign results in quizreply.type = 0x3
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Applying table 'MatchActionImpl.comprobation'
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Looking up key:
-* hdr.quizreply.question: 4567797074000000000000000000000000000000
-
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Table 'MatchActionImpl.comprobation': hit with handle 16
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Dumping entry 16
+[00:36:33.559] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.559] [bmv2] [D] [thread 608916] Entry 32 added to table 'MatchActionImpl.comprobation'
+[00:36:33.559] [bmv2] [D] [thread 608916] Dumping entry 32
 Match key:
-* hdr.quizreply.question: EXACT     4567797074000000000000000000000000000000
-Action entry: MatchActionImpl.forwardPacket - 436169726f000000000000000000000000000000,
+* hdr.quizreply.question: EXACT     4e69676572696100000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4162756a61000000000000000000000000000000,
 
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Action entry is MatchActionImpl.forwardPacket - 436169726f000000000000000000000000000000,
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Action MatchActionImpl.forwardPacket
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(69) Primitive hdr.quizreply.user_answer = answer
-[00:15:25.929] [bmv2] [D] [thread 425730] Primitive assign results in quizreply.user_answer = 0x436169726f000000000000000000000000000000
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(90) Condition "user_answer_tmp == hdr.quizreply.user_answer" (node_8) is true
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Applying table 'tbl_act_1'
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Looking up key:
+[00:36:33.560] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.560] [bmv2] [D] [thread 608916] Entry 33 added to table 'MatchActionImpl.comprobation'
+[00:36:33.560] [bmv2] [D] [thread 608916] Dumping entry 33
+Match key:
+* hdr.quizreply.question: EXACT     416c62616e696100000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 546972616e610000000000000000000000000000,
 
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Table 'tbl_act_1': miss
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Action entry is act_0 - 
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] Action act_0
-[00:15:25.929] [bmv2] [T] [thread 425730] [0.0] [cxt 0] program.p4(91) Primitive hdr.quizreply.correct = 0x1
-[00:15:25.929] [bmv2] [D] [thread 425730] Primitive assign results in quizreply.correct = 0x1
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Pipeline 'ingress': end
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Deparser 'deparser': start
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Deparsing header 'ethernet'
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Deparsing header 'quizreply'
-[00:15:25.929] [bmv2] [D] [thread 425730] [0.0] [cxt 0] Deparser 'deparser': end
-[00:15:25.929] [bmv2] [D] [thread 425730] Writing 55 bytes of packet data
-[00:15:25.930] [bmv2] [T] [thread 425730] exit
+[00:36:33.561] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.561] [bmv2] [D] [thread 608916] Entry 34 added to table 'MatchActionImpl.comprobation'
+[00:36:33.561] [bmv2] [D] [thread 608916] Dumping entry 34
+Match key:
+* hdr.quizreply.question: EXACT     5475726b65790000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 497374616e62756c000000000000000000000000,
+
+[00:36:33.561] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.561] [bmv2] [D] [thread 608916] Entry 35 added to table 'MatchActionImpl.comprobation'
+[00:36:33.562] [bmv2] [D] [thread 608916] Dumping entry 35
+Match key:
+* hdr.quizreply.question: EXACT     4972616e00000000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 54656872616e0000000000000000000000000000,
+
+[00:36:33.562] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.562] [bmv2] [D] [thread 608916] Entry 36 added to table 'MatchActionImpl.comprobation'
+[00:36:33.562] [bmv2] [D] [thread 608916] Dumping entry 36
+Match key:
+* hdr.quizreply.question: EXACT     53776564656e0000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 53746f636b686f6c6d0000000000000000000000,
+
+[00:36:33.563] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.563] [bmv2] [D] [thread 608916] Entry 37 added to table 'MatchActionImpl.comprobation'
+[00:36:33.563] [bmv2] [D] [thread 608916] Dumping entry 37
+Match key:
+* hdr.quizreply.question: EXACT     496e646f6e657369610000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4a616b6172746100000000000000000000000000,
+
+[00:36:33.563] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.564] [bmv2] [D] [thread 608916] Entry 38 added to table 'MatchActionImpl.comprobation'
+[00:36:33.564] [bmv2] [D] [thread 608916] Dumping entry 38
+Match key:
+* hdr.quizreply.question: EXACT     5361756469204172616269610000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5269796164680000000000000000000000000000,
+
+[00:36:33.564] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.564] [bmv2] [D] [thread 608916] Entry 39 added to table 'MatchActionImpl.comprobation'
+[00:36:33.564] [bmv2] [D] [thread 608916] Dumping entry 39
+Match key:
+* hdr.quizreply.question: EXACT     42756c6761726961000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 536f666961000000000000000000000000000000,
+
+[00:36:33.565] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.565] [bmv2] [D] [thread 608916] Entry 40 added to table 'MatchActionImpl.comprobation'
+[00:36:33.565] [bmv2] [D] [thread 608916] Dumping entry 40
+Match key:
+* hdr.quizreply.question: EXACT     43726f6174696100000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5a61677265620000000000000000000000000000,
+
+[00:36:33.566] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.566] [bmv2] [D] [thread 608916] Entry 41 added to table 'MatchActionImpl.comprobation'
+[00:36:33.566] [bmv2] [D] [thread 608916] Dumping entry 41
+Match key:
+* hdr.quizreply.question: EXACT     546861696c616e64000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 42616e676b6f6b00000000000000000000000000,
+
+[00:36:33.566] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.566] [bmv2] [D] [thread 608916] Entry 42 added to table 'MatchActionImpl.comprobation'
+[00:36:33.566] [bmv2] [D] [thread 608916] Dumping entry 42
+Match key:
+* hdr.quizreply.question: EXACT     436f6c6f6d626961000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 426f676f74610000000000000000000000000000,
+
+[00:36:33.567] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.567] [bmv2] [D] [thread 608916] Entry 43 added to table 'MatchActionImpl.comprobation'
+[00:36:33.567] [bmv2] [D] [thread 608916] Dumping entry 43
+Match key:
+* hdr.quizreply.question: EXACT     4772656563650000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 417468656e730000000000000000000000000000,
+
+[00:36:33.568] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.568] [bmv2] [D] [thread 608916] Entry 44 added to table 'MatchActionImpl.comprobation'
+[00:36:33.568] [bmv2] [D] [thread 608916] Dumping entry 44
+Match key:
+* hdr.quizreply.question: EXACT     4b656e7961000000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4e6169726f626900000000000000000000000000,
+
+[00:36:33.569] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.569] [bmv2] [D] [thread 608916] Entry 45 added to table 'MatchActionImpl.comprobation'
+[00:36:33.569] [bmv2] [D] [thread 608916] Dumping entry 45
+Match key:
+* hdr.quizreply.question: EXACT     506f72747567616c000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4c6973626f6e0000000000000000000000000000,
+
+[00:36:33.569] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.569] [bmv2] [D] [thread 608916] Entry 46 added to table 'MatchActionImpl.comprobation'
+[00:36:33.570] [bmv2] [D] [thread 608916] Dumping entry 46
+Match key:
+* hdr.quizreply.question: EXACT     4d616c6179736961000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4b75616c61204c756d7075720000000000000000,
+
+[00:36:33.570] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.570] [bmv2] [D] [thread 608916] Entry 47 added to table 'MatchActionImpl.comprobation'
+[00:36:33.570] [bmv2] [D] [thread 608916] Dumping entry 47
+Match key:
+* hdr.quizreply.question: EXACT     4972656c616e6400000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4475626c696e0000000000000000000000000000,
+
+[00:36:33.571] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.571] [bmv2] [D] [thread 608916] Entry 48 added to table 'MatchActionImpl.comprobation'
+[00:36:33.571] [bmv2] [D] [thread 608916] Dumping entry 48
+Match key:
+* hdr.quizreply.question: EXACT     4d6f726f63636f00000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5261626174000000000000000000000000000000,
+
+[00:36:33.572] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.572] [bmv2] [D] [thread 608916] Entry 49 added to table 'MatchActionImpl.comprobation'
+[00:36:33.572] [bmv2] [D] [thread 608916] Dumping entry 49
+Match key:
+* hdr.quizreply.question: EXACT     566965746e616d00000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 48616e6f69000000000000000000000000000000,
+
+[00:36:33.572] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.573] [bmv2] [D] [thread 608916] Entry 50 added to table 'MatchActionImpl.comprobation'
+[00:36:33.573] [bmv2] [D] [thread 608916] Dumping entry 50
+Match key:
+* hdr.quizreply.question: EXACT     506f6c616e640000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5761727361770000000000000000000000000000,
+
+[00:36:33.573] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.573] [bmv2] [D] [thread 608916] Entry 51 added to table 'MatchActionImpl.comprobation'
+[00:36:33.573] [bmv2] [D] [thread 608916] Dumping entry 51
+Match key:
+* hdr.quizreply.question: EXACT     5068696c697070696e6573000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4d616e696c610000000000000000000000000000,
+
+[00:36:33.574] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.574] [bmv2] [D] [thread 608916] Entry 52 added to table 'MatchActionImpl.comprobation'
+[00:36:33.574] [bmv2] [D] [thread 608916] Dumping entry 52
+Match key:
+* hdr.quizreply.question: EXACT     5065727500000000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4c696d6100000000000000000000000000000000,
+
+[00:36:33.575] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.575] [bmv2] [D] [thread 608916] Entry 53 added to table 'MatchActionImpl.comprobation'
+[00:36:33.575] [bmv2] [D] [thread 608916] Dumping entry 53
+Match key:
+* hdr.quizreply.question: EXACT     537769747a65726c616e64000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5a75726963680000000000000000000000000000,
+
+[00:36:33.576] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.576] [bmv2] [D] [thread 608916] Entry 54 added to table 'MatchActionImpl.comprobation'
+[00:36:33.576] [bmv2] [D] [thread 608916] Dumping entry 54
+Match key:
+* hdr.quizreply.question: EXACT     4e6570616c000000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4b6174686d616e64750000000000000000000000,
+
+[00:36:33.576] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.576] [bmv2] [D] [thread 608916] Entry 55 added to table 'MatchActionImpl.comprobation'
+[00:36:33.577] [bmv2] [D] [thread 608916] Dumping entry 55
+Match key:
+* hdr.quizreply.question: EXACT     4368696c65000000000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 53616e746961676f000000000000000000000000,
+
+[00:36:33.577] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.577] [bmv2] [D] [thread 608916] Entry 56 added to table 'MatchActionImpl.comprobation'
+[00:36:33.577] [bmv2] [D] [thread 608916] Dumping entry 56
+Match key:
+* hdr.quizreply.question: EXACT     556b7261696e6500000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4b79697600000000000000000000000000000000,
+
+[00:36:33.578] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.578] [bmv2] [D] [thread 608916] Entry 57 added to table 'MatchActionImpl.comprobation'
+[00:36:33.578] [bmv2] [D] [thread 608916] Dumping entry 57
+Match key:
+* hdr.quizreply.question: EXACT     4175737472696100000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 5669656e6e610000000000000000000000000000,
+
+[00:36:33.579] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.579] [bmv2] [D] [thread 608916] Entry 58 added to table 'MatchActionImpl.comprobation'
+[00:36:33.579] [bmv2] [D] [thread 608916] Dumping entry 58
+Match key:
+* hdr.quizreply.question: EXACT     416c676572696100000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 416c676965727300000000000000000000000000,
+
+[00:36:33.579] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.579] [bmv2] [D] [thread 608916] Entry 59 added to table 'MatchActionImpl.comprobation'
+[00:36:33.580] [bmv2] [D] [thread 608916] Dumping entry 59
+Match key:
+* hdr.quizreply.question: EXACT     4e6577205a65616c616e64000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 57656c6c696e67746f6e00000000000000000000,
+
+[00:36:33.580] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.581] [bmv2] [D] [thread 608916] Entry 60 added to table 'MatchActionImpl.comprobation'
+[00:36:33.581] [bmv2] [D] [thread 608916] Dumping entry 60
+Match key:
+* hdr.quizreply.question: EXACT     437a6563682052657075626c6963000000000000
+Action entry: MatchActionImpl.forwardPacket - 5072616775650000000000000000000000000000,
+
+[00:36:33.581] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.581] [bmv2] [D] [thread 608916] Entry 61 added to table 'MatchActionImpl.comprobation'
+[00:36:33.581] [bmv2] [D] [thread 608916] Dumping entry 61
+Match key:
+* hdr.quizreply.question: EXACT     46696e6c616e6400000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 48656c73696e6b69000000000000000000000000,
+
+[00:36:33.582] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.582] [bmv2] [D] [thread 608916] Entry 62 added to table 'MatchActionImpl.comprobation'
+[00:36:33.582] [bmv2] [D] [thread 608916] Dumping entry 62
+Match key:
+* hdr.quizreply.question: EXACT     42616e676c616465736800000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4468616b61000000000000000000000000000000,
+
+[00:36:33.583] [bmv2] [T] [thread 608916] bm_table_add_entry
+[00:36:33.583] [bmv2] [D] [thread 608916] Entry 63 added to table 'MatchActionImpl.comprobation'
+[00:36:33.583] [bmv2] [D] [thread 608916] Dumping entry 63
+Match key:
+* hdr.quizreply.question: EXACT     457468696f706961000000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4164646973204162616261000000000000000000,
+
+[00:36:33.583] [bmv2] [T] [thread 608916] run_traffic
+[00:36:33.583] [bmv2] [D] [thread 608916] Interface = packets
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser 'parser': start
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Extracting header 'ethernet'
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser state 'start': key is 2222
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser 'parser' entering state 'parse_quizreply'
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Extracting header 'quizreply'
+[00:36:33.585] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser state 'parse_quizreply' has no switch, going to default next state
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Bytes parsed: 55
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Parser 'parser': end
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Pipeline 'ingress': start
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Applying table 'tbl_act'
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Looking up key:
+
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Table 'tbl_act': miss
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Action entry is act_2 - 
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Action act_2
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(84) Primitive bit<160> user_answer_tmp = hdr.quizreply.user_answer;
+[00:36:33.586] [bmv2] [D] [thread 608916] Primitive assign results in scalars.user_answer_tmp = 0x4275656e6f732041697265730000000000000000
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(85) Condition "hdr.ethernet.isValid()" (node_3) is true
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(86) Condition "hdr.quizreply.isValid()" (node_4) is true
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(87) Condition "hdr.quizreply.type == 2" (node_5) is true
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Applying table 'tbl_act_0'
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Looking up key:
+
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Table 'tbl_act_0': miss
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Action entry is act - 
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Action act
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(88) Primitive hdr.quizreply.type = 3
+[00:36:33.586] [bmv2] [D] [thread 608916] Primitive assign results in quizreply.type = 0x3
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Applying table 'MatchActionImpl.comprobation'
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Looking up key:
+* hdr.quizreply.question: 417267656e74696e610000000000000000000000
+
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Table 'MatchActionImpl.comprobation': hit with handle 14
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Dumping entry 14
+Match key:
+* hdr.quizreply.question: EXACT     417267656e74696e610000000000000000000000
+Action entry: MatchActionImpl.forwardPacket - 4275656e6f732041697265730000000000000000,
+
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Action entry is MatchActionImpl.forwardPacket - 4275656e6f732041697265730000000000000000,
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Action MatchActionImpl.forwardPacket
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(69) Primitive hdr.quizreply.user_answer = answer
+[00:36:33.586] [bmv2] [D] [thread 608916] Primitive assign results in quizreply.user_answer = 0x4275656e6f732041697265730000000000000000
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(90) Condition "user_answer_tmp == hdr.quizreply.user_answer" (node_8) is true
+[00:36:33.586] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Applying table 'tbl_act_1'
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Looking up key:
+
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Table 'tbl_act_1': miss
+[00:36:33.586] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Action entry is act_0 - 
+[00:36:33.587] [bmv2] [T] [thread 608916] [0.0] [cxt 0] Action act_0
+[00:36:33.587] [bmv2] [T] [thread 608916] [0.0] [cxt 0] program.p4(91) Primitive hdr.quizreply.correct = 0x1
+[00:36:33.587] [bmv2] [D] [thread 608916] Primitive assign results in quizreply.correct = 0x1
+[00:36:33.587] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Pipeline 'ingress': end
+[00:36:33.587] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Deparser 'deparser': start
+[00:36:33.587] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Deparsing header 'ethernet'
+[00:36:33.587] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Deparsing header 'quizreply'
+[00:36:33.587] [bmv2] [D] [thread 608916] [0.0] [cxt 0] Deparser 'deparser': end
+[00:36:33.587] [bmv2] [D] [thread 608916] Writing 55 bytes of packet data
+[00:36:33.587] [bmv2] [T] [thread 608916] exit

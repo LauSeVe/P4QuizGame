@@ -89,7 +89,6 @@ control MatchActionImpl(inout headers hdr,
                     comprobation.apply();
                     if (user_answer_tmp == hdr.quizreply.user_answer){
                     hdr.quizreply.correct = 0x1;
-                    
                     }
                     else {
                     hdr.quizreply.correct = 0x2;
@@ -116,7 +115,7 @@ control DeparserImpl(packet_out packet,
                       inout standard_metadata_t smeta) {
     apply {
         packet.emit(hdr.ethernet);  // Emit the Ethernet header.
-        packet.emit(hdr.quizreply);  // Emit the quizreplay header.
+        packet.emit(hdr.quizreply);  // Emit the quizreply header.
     }
 }
 

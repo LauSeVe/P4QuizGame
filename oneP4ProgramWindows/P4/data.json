@@ -1,0 +1,523 @@
+{
+  "lvl1": [
+        {
+            "Id": 0,
+            "Country": "Japan",
+            "Answer1": "Beijing",
+            "Answer2": "Tokyo",
+            "Answer3": "New Delhi",
+            "Correct": 1
+        },
+        {
+            "Id": 1,
+            "Country": "Germany",
+            "Answer1": "Berlin",
+            "Answer2": "Munich",
+            "Answer3": "Hamburg",
+            "Correct": 0
+        },
+        {
+            "Id": 2,
+            "Country": "Brazil",
+            "Answer1": "Rio de Janeiro",
+            "Answer2": "Sao Paulo",
+            "Answer3": "Brasilia",
+            "Correct": 2
+        },
+        {
+            "Id": 3,
+            "Country": "India",
+            "Answer1": "Delhi",
+            "Answer2": "Mumbai",
+            "Answer3": "Chennai",
+            "Correct": 0
+        },
+        {
+            "Id": 4,
+            "Country": "China",
+            "Answer1": "Shanghai",
+            "Answer2": "Beijing",
+            "Answer3": "Hong Kong",
+            "Correct": 1
+        },
+        {
+            "Id": 5,
+            "Country": "United Kingdom",
+            "Answer1": "London",
+            "Answer2": "Manchester",
+            "Answer3": "Edinburgh",
+            "Correct": 0
+        },
+        {
+            "Id": 6,
+            "Country": "Australia",
+            "Answer1": "Sydney",
+            "Answer2": "Melbourne",
+            "Answer3": "Brisbane",
+            "Correct": 1
+        },
+        {
+            "Id": 7,
+            "Country": "Canada",
+            "Answer1": "Ottawa",
+            "Answer2": "Toronto",
+            "Answer3": "Vancouver",
+            "Correct": 0
+        },
+        {
+            "Id": 8,
+            "Country": "Italy",
+            "Answer1": "Rome",
+            "Answer2": "Florence",
+            "Answer3": "Venice",
+            "Correct": 0
+        },
+        {
+            "Id": 9,
+            "Country": "Spain",
+            "Answer1": "Madrid",
+            "Answer2": "Barcelona",
+            "Answer3": "Seville",
+            "Correct": 0
+        },
+        {
+            "Id": 10,
+            "Country": "South Korea",
+            "Answer1": "Seoul",
+            "Answer2": "Busan",
+            "Answer3": "Incheon",
+            "Correct": 0
+        },
+        {
+            "Id": 11,
+            "Country": "Russia",
+            "Answer1": "Moscow",
+            "Answer2": "Saint Petersburg",
+            "Answer3": "Vladivostok",
+            "Correct": 0
+        },
+        {
+            "Id": 12,
+            "Country": "Mexico",
+            "Answer1": "Mexico City",
+            "Answer2": "Cancun",
+            "Answer3": "Guadalajara",
+            "Correct": 0
+        },
+        {
+            "Id": 13,
+            "Country": "Netherlands",
+            "Answer1": "Amsterdam",
+            "Answer2": "Rotterdam",
+            "Answer3": "The Hague",
+            "Correct": 0
+        },
+        {
+            "Id": 14,
+            "Country": "Argentina",
+            "Answer1": "Mendoza",
+            "Answer2": "Cordoba",
+            "Answer3": "Buenos Aires",
+            "Correct": 2
+        },
+        {
+            "Id": 15,
+            "Country": "France",
+            "Answer1": "Paris",
+            "Answer2": "Rome",
+            "Answer3": "Madrid",
+            "Correct": 0
+        }
+  ],
+    "lvl2": [
+        {
+            "Id": 0,
+            "Country": "Egypt",
+            "Answer1": "Cairo",
+            "Answer2": "Alexandria",
+            "Answer3": "Luxor",
+            "Correct": 0
+        },
+        {
+            "Id": 1,
+            "Country": "South Africa",
+            "Answer1": "Johannesburg",
+            "Answer2": "Cape Town",
+            "Answer3": "Pretoria",
+            "Correct": 1
+        },
+        {
+            "Id": 2,
+            "Country": "United States",
+            "Answer1": "New York",
+            "Answer2": "Los Angeles",
+            "Answer3": "Washington D.C.",
+            "Correct": 2
+        },
+        {
+            "Id": 3,
+            "Country": "Norway",
+            "Answer1": "Oslo",
+            "Answer2": "Bergen",
+            "Answer3": "Trondheim",
+            "Correct": 0
+        },
+        {
+            "Id": 4,
+            "Country": "Denmark",
+            "Answer1": "Aarhus",
+            "Answer2": "Odense",
+            "Answer3": "Copenhagen",
+            "Correct": 2
+        },
+        {
+            "Id": 5,
+            "Country": "Iceland",
+            "Answer1": "Akureryri",
+            "Answer2": "Reykjavik",
+            "Answer3": "Kopavogur",
+            "Correct": 1
+        },
+          {
+            "Id": 6,
+            "Country": "Belgium",
+            "Answer1": "Ghent",
+            "Answer2": "Antwerp",
+            "Answer3": "Brussels",
+            "Correct": 2
+        },
+        {
+            "Id": 7,
+            "Country": "Hungary",
+            "Answer1": "Budapest",
+            "Answer2": "Debrecen",
+            "Answer3": "Szeged",
+            "Correct": 0
+        },
+        {
+            "Id": 8,
+            "Country": "Slovakia",
+            "Answer1": "Bratislava",
+            "Answer2": "Kosice",
+            "Answer3": "Presov",
+            "Correct": 0
+        },
+        {
+            "Id": 9,
+            "Country": "Romania",
+            "Answer1": "Bucharest",
+            "Answer2": "Cluj-Napoca",
+            "Answer3": "Timisoara",
+            "Correct": 0
+        },
+        {
+            "Id": 10,
+            "Country": "Serbia",
+            "Answer1": "Belgrade",
+            "Answer2": "Novi Sad",
+            "Answer3": "Nis",
+            "Correct": 0
+        },
+        {
+            "Id": 11,
+            "Country": "Cyprus",
+            "Answer1": "Nicosia",
+            "Answer2": "Limassol",
+            "Answer3": "Larnaca",
+            "Correct": 0
+        },
+        {
+            "Id": 12,
+            "Country": "Lithuania",
+            "Answer1": "Kaunas",
+            "Answer2": "Vilnius",
+            "Answer3": "Klaipeda",
+            "Correct": 1
+        },
+        {
+            "Id": 13,
+            "Country": "Latvia",
+            "Answer1": "Daugavpils",
+            "Answer2": "Liepaja",
+            "Answer3": "Riga",
+            "Correct": 2
+        },
+        {
+            "Id": 14,
+            "Country": "Estonia",
+            "Answer1": "Narva",
+            "Answer2": "Tartu",
+            "Answer3": "Tallinn",
+            "Correct": 2
+        },
+        {
+            "Id": 15,
+            "Country": "Singapore",
+            "Answer1": "Woodlands",
+            "Answer2": "Singapore",
+            "Answer3": "Jurong East",
+            "Correct": 1
+        }
+    ],
+    "lvl3": [
+        {
+            "Id": 0,
+            "Country": "Nigeria",
+            "Answer1": "Lagos",
+            "Answer2": "Abuja",
+            "Answer3": "Kano",
+            "Correct": 1
+        },
+        {
+            "Id": 1,
+            "Country": "Albania",
+            "Answer1": "Durres",
+            "Answer2": "Vlore",
+            "Answer3": "Tirana",
+            "Correct": 2
+        },
+        {
+            "Id": 2,
+            "Country": "Turkey",
+            "Answer1": "Istanbul",
+            "Answer2": "Ankara",
+            "Answer3": "Izmir",
+            "Correct": 0
+        },
+        {
+            "Id": 3,
+            "Country": "Iran",
+            "Answer1": "Tehran",
+            "Answer2": "Isfahan",
+            "Answer3": "Shiraz",
+            "Correct": 0
+        },
+        {
+            "Id": 4,
+            "Country": "Sweden",
+            "Answer1": "Stockholm",
+            "Answer2": "Gothenburg",
+            "Answer3": "Malm�",
+            "Correct": 0
+        },
+        {
+            "Id": 5,
+            "Country": "Indonesia",
+            "Answer1": "Jakarta",
+            "Answer2": "Surabaya",
+            "Answer3": "Bandung",
+            "Correct": 0
+        },
+        {
+            "Id": 6,
+            "Country": "Saudi Arabia",
+            "Answer1": "Riyadh",
+            "Answer2": "Jeddah",
+            "Answer3": "Dammam",
+            "Correct": 0
+        },
+        {
+            "Id": 7,
+            "Country": "Bulgaria",
+            "Answer1": "Plovdiv",
+            "Answer2": "Sofia",
+            "Answer3": "Varna",
+            "Correct": 1
+        },
+        {
+            "Id": 8,
+            "Country": "Croatia",
+            "Answer1": "Zagreb",
+            "Answer2": "Split",
+            "Answer3": "Rijeka",
+            "Correct": 0
+        },
+        {
+            "Id": 9,
+            "Country": "Thailand",
+            "Answer1": "Bangkok",
+            "Answer2": "Chiang Mai",
+            "Answer3": "Phuket",
+            "Correct": 0
+        },
+        {
+            "Id": 10,
+            "Country": "Colombia",
+            "Answer1": "Bogota",
+            "Answer2": "Medellin",
+            "Answer3": "Cali",
+            "Correct": 0
+        },
+        {
+            "Id": 11,
+            "Country": "Greece",
+            "Answer1": "Athens",
+            "Answer2": "Thessaloniki",
+            "Answer3": "Heraklion",
+            "Correct": 0
+        },
+        {
+            "Id": 12,
+            "Country": "Kenya",
+            "Answer1": "Nairobi",
+            "Answer2": "Mombasa",
+            "Answer3": "Kisumu",
+            "Correct": 0
+        },
+        {
+            "Id": 13,
+            "Country": "Portugal",
+            "Answer1": "Lisbon",
+            "Answer2": "Porto",
+            "Answer3": "Faro",
+            "Correct": 0
+        },
+        {
+            "Id": 14,
+            "Country": "Malaysia",
+            "Answer1": "Kuala Lumpur",
+            "Answer2": "Penang",
+            "Answer3": "Kuching",
+            "Correct": 0
+        },
+       {
+            "Id": 15,
+            "Country": "Ireland",
+            "Answer1": "Dublin",
+            "Answer2": "Cork",
+            "Answer3": "Galway",
+            "Correct": 0
+       }
+  ],
+  "lvl4": [
+        {
+            "Id": 0,
+            "Country": "Morocco",
+            "Answer1": "Rabat",
+            "Answer2": "Casablanca",
+            "Answer3": "Marrakech",
+            "Correct": 0
+        },
+        {
+            "Id": 1,
+            "Country": "Vietnam",
+            "Answer1": "Hanoi",
+            "Answer2": "Ho Chi Minh City",
+            "Answer3": "Da Nang",
+            "Correct": 0
+        },
+        {
+            "Id": 2,
+            "Country": "Poland",
+            "Answer1": "Warsaw",
+            "Answer2": "Krakow",
+            "Answer3": "Wroclaw",
+            "Correct": 0
+        },
+        {
+            "Id": 3,
+            "Country": "Philippines",
+            "Answer1": "Manila",
+            "Answer2": "Cebu City",
+            "Answer3": "Davao City",
+            "Correct": 0
+        },
+        {
+            "Id": 4,
+            "Country": "Peru",
+            "Answer1": "Lima",
+            "Answer2": "Cusco",
+            "Answer3": "Arequipa",
+            "Correct": 0
+        },
+        {
+            "Id": 5,
+            "Country": "Switzerland",
+            "Answer1": "Zurich",
+            "Answer2": "Geneva",
+            "Answer3": "Bern",
+            "Correct": 0
+        },
+        {
+            "Id": 6,
+            "Country": "Nepal",
+            "Answer1": "Kathmandu",
+            "Answer2": "Pokhara",
+            "Answer3": "Lalitpur",
+            "Correct": 0
+        },
+        {
+            "Id": 7,
+            "Country": "Chile",
+            "Answer1": "Santiago",
+            "Answer2": "Valparaiso",
+            "Answer3": "Concepcion",
+            "Correct": 0
+        },
+        {
+            "Id": 8,
+            "Country": "Ukraine",
+            "Answer1": "Kyiv",
+            "Answer2": "Kharkiv",
+            "Answer3": "Lviv",
+            "Correct": 0
+        },
+        {
+            "Id": 9,
+            "Country": "Austria",
+            "Answer1": "Vienna",
+            "Answer2": "Salzburg",
+            "Answer3": "Innsbruck",
+            "Correct": 0
+        },
+        {
+            "Id": 10,
+            "Country": "Algeria",
+            "Answer1": "Algiers",
+            "Answer2": "Oran",
+            "Answer3": "Constantine",
+            "Correct": 0
+        },
+        {
+            "Id": 11,
+            "Country": "New Zealand",
+            "Answer1": "Wellington",
+            "Answer2": "Auckland",
+            "Answer3": "Christchurch",
+            "Correct": 0
+        },
+        {
+            "Id": 12,
+            "Country": "Czech Republic",
+            "Answer1": "Prague",
+            "Answer2": "Brno",
+            "Answer3": "Ostrava",
+            "Correct": 0
+        },
+        {
+            "Id": 13,
+            "Country": "Finland",
+            "Answer1": "Helsinki",
+            "Answer2": "Tampere",
+            "Answer3": "Turku",
+            "Correct": 0
+        },
+        {
+            "Id": 14,
+            "Country": "Bangladesh",
+            "Answer1": "Dhaka",
+            "Answer2": "Chittagong",
+            "Answer3": "Khulna",
+            "Correct": 0
+        },
+        {
+            "Id": 15,
+            "Country": "Ethiopia",
+            "Answer1": "Addis Ababa",
+            "Answer2": "Dire Dawa",
+            "Answer3": "Gondar",
+            "Correct": 0
+        }
+    ]
+}
+
