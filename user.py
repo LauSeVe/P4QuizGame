@@ -49,15 +49,11 @@ try:
 
     bind_layers(Ether, QuizHeaderRequest, type=TYPE_QUIZ_REQUEST)
     custom_packet_request = Ether(type = TYPE_QUIZ_REQUEST) / QuizHeaderRequest(session=userSession, type=0, lvl=userLevel, question=packetQuestion, answer1=packetAnswer1, answer2=packetAnswer2, answer3=packetAnswer3) 
-    request_packet_in = "./P4/test-case1/packets.pcap"
+    request_packet_in = "./P4/test-case1/packets_in.pcap"
     wrpcap(request_packet_in, custom_packet_request)
 
-    os.system("cd ./P4")
-    os.system("make")
-    os.system("cd ..")
-    
     # Wait until request_packet_out is created
-    request_packet_out = "./P4/test-case1/packets0.pcap"
+    request_packet_out = "./P4/test-case1/packets_out.pcap"
     if wait_for_file(request_packet_out):
     # Print the question and options from the packet_out
         packets = rdpcap(request_packet_out)
@@ -80,6 +76,8 @@ try:
         print("File not created within the specified timeout.")
         exit()
 
+    os.system("rm ./P4/test-case1/packets_out.pcap")
+
     # Prompt the user to select an option
     user_answer = input("Select the option: ")
 
@@ -94,10 +92,6 @@ try:
         print("Invalid input. Please enter 'A', 'B', or 'C'.")
         exit()
 
-    os.system("cd ./P4")
-    os.system("make clean")
-    os.system("cd ..")
-    
     # Create the header to reply the quiz
     correct_reply_packet = 0;
     bind_layers(Ether, QuizHeaderReply, type=TYPE_QUIZ_REPLY)
@@ -105,10 +99,6 @@ try:
     reply_packet_in = "./P4/test-case1/packets_in.pcap"
     wrpcap(reply_packet_in, custom_packet_reply)
 
-    os.system("cd ./P4")
-    os.system("make")
-    os.system("cd ..")
-    
     # Wait until reply_packet_out is created
     reply_packet_out = "./P4/test-case1/packets_out.pcap"
     if wait_for_file(reply_packet_out):
