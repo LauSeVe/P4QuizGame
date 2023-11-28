@@ -76,7 +76,6 @@ try:
         print("File not created within the specified timeout.")
         exit()
 
-    os.system("rm ./P4/test-case1/packets_out.pcap")
 
     # Prompt the user to select an option
     user_answer = input("Select the option: ")
@@ -91,7 +90,7 @@ try:
     else:
         print("Invalid input. Please enter 'A', 'B', or 'C'.")
         exit()
-
+    os.system("rm ./P4/test-case1/packets_out.pcap")
     # Create the header to reply the quiz
     correct_reply_packet = 0;
     bind_layers(Ether, QuizHeaderReply, type=TYPE_QUIZ_REPLY)
